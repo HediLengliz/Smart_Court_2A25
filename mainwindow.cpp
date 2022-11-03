@@ -40,3 +40,10 @@ void MainWindow::on_pushButton_2_clicked()
     m= new aaaa(this);
     m->show();
 }
+
+void MainWindow::on_mod_clicked()
+{
+    o= new aaaaa(this);
+    o->show();
+}
+

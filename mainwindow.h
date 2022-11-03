@@ -5,6 +5,7 @@
 #include "aa.h"
 #include"aaa.h"
 #include "aaaa.h"
+#include"aaaaa.h"
 #include "aj.h"
 namespace Ui {
 class MainWindow;
@@ -29,11 +30,15 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_mod_clicked();
+
 private:
     Ui::MainWindow *ui;
     AA *a;
     aaa *l;
     aaaa *m;
+    aaaaa *o;
+
 
 };
 

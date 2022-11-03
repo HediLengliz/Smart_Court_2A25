@@ -54,11 +54,25 @@ bool Aj::supprimer(int id)
 {
     QSqlQuery query;
 
-query.prepare("delete from  Ajj where id=:id");
+query.prepare("delete from  Aj where id=:id");
 
 query.bindValue(":id", id);
 
 return query.exec();
 
 
+}
+bool Aj::modifier(int id,QString nom,QString prenom,int numero,QString etat)
+{
+    QSqlQuery query;
+
+         QString id_string=QString::number(id);
+       QString numero_string= QString::number(numero);
+           query.prepare(" UPDATE Aj set id=:id ,nom=:nom,prenom=:prenom, numero=:numero,etat=:etat where id=:id");
+           query.bindValue(":id",id_string);
+           query.bindValue(":nom",nom);
+           query.bindValue(":prenom",prenom);
+           query.bindValue(":numero",numero_string);
+           query.bindValue(":etat",etat);
+   return query.exec();
 }

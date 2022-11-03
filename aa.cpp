@@ -16,11 +16,11 @@ AA::~AA()
 
 void AA::on_pb_ajouter_clicked()
 {
-    int id=ui->le_id->text().toInt();
-     QString nom=ui->le_nom->text();
-    QString prenom=ui->le_prenom->text();
-    int numero=ui->le_numero->text().toInt();
-    QString etat=ui->le_etat->text();
+    int id=ui->le_id1->text().toInt();
+     QString nom=ui->le_nom1->text();
+    QString prenom=ui->le_prenom1->text();
+    int numero=ui->le_numero1->text().toInt();
+    QString etat=ui->le_etat1->text();
     Aj a(id,nom,prenom,numero,etat);
   if (a.ajouter())  QMessageBox::information(nullptr, QObject::tr("database is open"),
                 QObject::tr("AJOUT successful.\n"

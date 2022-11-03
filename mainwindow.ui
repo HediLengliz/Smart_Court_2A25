@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1017</width>
+    <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,111 +15,318 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-    background:url(C:\court-hammerr.jpg) ;
+    background:url(C:/HHH.jpg) ;
 }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QFrame" name="Qframe">
+   <widget class="QFrame" name="Qframe_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
-      <width>311</width>
-      <height>181</height>
+      <x>120</x>
+      <y>90</y>
+      <width>721</width>
+      <height>311</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">*{
-    background:url(C:\court-hammerr.jpg) ;
+     <string notr="true">QFrame
+{
+	background:#51556e;
+    border-radius:15px;
 }</string>
     </property>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>140</y>
-       <width>113</width>
-       <height>20</height>
+       <x>250</x>
+       <y>40</y>
+       <width>251</width>
+       <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+    font-family:century gothic;
+    font-size:24px;
+	color:white;
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>SERVICE JURIDQUES</string>
+     </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>75</width>
-       <height>23</height>
+       <x>380</x>
+       <y>450</y>
+       <width>231</width>
+       <height>171</height>
       </rect>
      </property>
      <property name="text">
-      <string>supprimer </string>
+      <string/>
      </property>
-    </widget>
-    <widget class="QPushButton" name="hiiii">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>60</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
+     <property name="pixmap">
+      <pixmap>D:/QTprojet/smart court.png</pixmap>
      </property>
-     <property name="text">
-      <string>Ajouter</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="hkkk">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>60</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>afficher </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>120</y>
-       <width>47</width>
-       <height>14</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>report </string>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
-       <x>220</x>
-       <y>130</y>
-       <width>75</width>
-       <height>23</height>
+       <x>420</x>
+       <y>230</y>
+       <width>201</width>
+       <height>51</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
      <property name="text">
-      <string>send </string>
+      <string>SEND</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>240</y>
+       <width>251</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>32767</number>
+     </property>
+     <property name="placeholderText">
+      <string>Report</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hiiii">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>130</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border:blue;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>ADD an employee</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/unknown (3).png</normaloff>../../../Desktop/unknown (3).png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>130</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>Delete an employee</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/unknown (4).png</normaloff>../../../Desktop/unknown (4).png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hkkk">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>130</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>List of employees</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/unknown (2).png</normaloff>../../../Desktop/unknown (2).png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mod">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border:blue;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>modifier</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/unknown (1).png</normaloff>../../../Desktop/unknown (1).png</iconset>
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_15">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>0</y>
-      <width>91</width>
-      <height>51</height>
+      <x>380</x>
+      <y>10</y>
+      <width>211</width>
+      <height>121</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-radius: 35px;
+border-color:white;
+background:#303030;
+}</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../clubs &amp; events/icons/2636184.png</normaloff>../../../../clubs &amp; events/icons/2636184.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -128,7 +335,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>1017</width>
      <height>22</height>
     </rect>
    </property>

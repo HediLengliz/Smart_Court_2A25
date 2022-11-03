@@ -28,6 +28,7 @@ SOURCES += \
     aa.cpp \
     aaa.cpp \
     aaaa.cpp \
+    aaaaa.cpp \
     aj.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     aa.h \
     aaa.h \
     aaaa.h \
+    aaaaa.h \
     aj.h \
         mainwindow.h \
     connection.h
@@ -45,6 +47,7 @@ FORMS += \
         aa.ui \
         aaa.ui \
         aaaa.ui \
+        aaaaa.ui \
         mainwindow.ui
 
 # Default rules for deployment.

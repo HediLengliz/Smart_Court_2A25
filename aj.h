@@ -20,6 +20,7 @@ public:
     bool ajouter();
     QSqlQueryModel* afficher();
     bool supprimer(int);
+     bool modifier(int,QString,QString,int,QString);
 private:
     int id,numero;
     QString nom,prenom,etat;
