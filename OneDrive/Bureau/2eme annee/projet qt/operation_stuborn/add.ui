@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>784</width>
-    <height>656</height>
+    <width>859</width>
+    <height>624</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,16 +15,16 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-    background:url(C:/Users/hedi2/downloads/hamer.jpg) ;
+background:url(C:/Users/hedi2/downloads/hamer.jpg)
 }</string>
   </property>
-  <widget class="QFrame" name="add_employee">
+  <widget class="QFrame" name="add_room">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>30</y>
-     <width>501</width>
-     <height>531</height>
+     <x>60</x>
+     <y>0</y>
+     <width>581</width>
+     <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">

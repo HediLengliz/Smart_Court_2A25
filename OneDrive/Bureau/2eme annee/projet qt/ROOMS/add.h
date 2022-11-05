@@ -15,8 +15,12 @@ public:
     explicit add(QWidget *parent = nullptr);
     ~add();
 
+private slots:
+    void on_ADD_clicked();
+
 private:
     Ui::add *ui;
+
 };
 
 #endif // ADD_H

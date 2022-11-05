@@ -36,8 +36,8 @@ bool room::addroom()
 {
 
     QSqlQuery query ;
-    query.prepare("INSERT INTO ROOMS (ID_ROOM,PIN_CODE,ROOM_NUMBER,ROOM_TYPE,CREATION_DATE,ROOM_STATE)"  "VALUES (:ID_ROOM,:PIN_CODE ,:ROOM_NUMBER, :ROOM_TYPE , :CREATION_DATE, :ROOM_STATE)");
-        query.bindValue(":ID_ROOM",ID_ROOM);
+    query.prepare("INSERT INTO ROOMS (ROOM_ID,PIN_CODE,ROOM_NUMBER,ROOM_TYPE,CREATION_DATE,ROOM_STATE)"  "VALUES (:ROOM_ID,:PIN_CODE ,:ROOM_NUMBER, :ROOM_TYPE , :CREATION_DATE, :ROOM_STATE)");
+        query.bindValue(":ROOM_ID",ID_ROOM);
         query.bindValue(":PIN_CODE",pincode);
         query.bindValue(":ROOM_NUMBER",number);
         query.bindValue(":ROOM_TYPE",room_type);
@@ -48,6 +48,8 @@ bool room::addroom()
 }
 QSqlQueryModel* room::displayroom()
 {
+
+
 
     QSqlQueryModel* model = new QSqlQueryModel();
               model->setQuery("SELECT * FROM ROOMS");
@@ -60,7 +62,7 @@ QSqlQueryModel* room::displayroom()
 
          return model;
 }
-bool room::deleteroom(int ID_ROOM)
+bool room::deleteroom(QString ID_ROOM)
 {
 
 
@@ -74,18 +76,22 @@ bool room::deleteroom(int ID_ROOM)
       }
       else return false;
 
+
+
+
+
+
+
 }
 bool room::modifyroom()
 {
-    QSqlQuery query ;
-    query.prepare("UPDATE  ROOMS  Set PIN_CODE=:PIN_CODE WHERE ID_ROOM=:ID_ROOM");
-                 query.bindValue(":PIN_CODE",pincode);
-                query.bindValue(":ID_ROOM",ID_ROOM);
-    if(query.exec())
+    QSqlQuery query;
+    query.prepare("UPDATE from ROOMS where ID_ROOM=:ID_ROOM");
+    query.bindValue(":ID_ROOM",ID_ROOM);
+    if (query.exec())
     {
-                return query.exec();
+        return query.exec();
+
     }
     else return false;
-
-
 }

@@ -1,17 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>display</class>
- <widget name="display" class="QDialog">
+ <widget class="QDialog" name="display">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>877</width>
+    <height>513</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+background:url(C:/Users/hedi2/downloads/hamer.jpg)
+}</string>
+  </property>
+  <widget class="QFrame" name="add_room">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>90</y>
+     <width>501</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame
+{
+	background:#51556e;
+    border-radius:15px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="DEL">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>150</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>DISPALY</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LRI">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>30</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>123456</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RID">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+    font-family:century gothic;
+    font-size:24px;
+	color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Room ID</string>
+    </property>
+   </widget>
+   <zorder>DEL</zorder>
+   <zorder>RID</zorder>
+   <zorder>LRI</zorder>
+  </widget>
  </widget>
  <resources/>
  <connections/>

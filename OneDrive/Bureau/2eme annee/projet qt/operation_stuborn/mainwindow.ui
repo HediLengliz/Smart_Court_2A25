@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1097</width>
-    <height>590</height>
+    <width>878</width>
+    <height>653</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,9 +23,9 @@ background:url(C:/Users/hedi2/downloads/court.jpg)
    <widget class="QFrame" name="Qframe">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>100</y>
-      <width>931</width>
+      <x>80</x>
+      <y>180</y>
+      <width>731</width>
       <height>341</height>
      </rect>
     </property>
@@ -42,7 +42,7 @@ background:url(C:/Users/hedi2/downloads/court.jpg)
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label_9">
+    <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
        <x>380</x>
@@ -61,7 +61,7 @@ background:url(C:/Users/hedi2/downloads/court.jpg)
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_17">
+    <widget class="QPushButton" name="pushButton_19">
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -103,7 +103,7 @@ background:#303030;
       </size>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLineEdit" name="lineEdit_7">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -141,7 +141,7 @@ border-bottom:1px solid #717072;
       <string>Report</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="ADD_PUSH_2">
+    <widget class="QPushButton" name="ADD_PUSH_4">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -184,7 +184,7 @@ background:#303030;
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_23">
+    <widget class="QPushButton" name="pushButton_27">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -226,7 +226,7 @@ background:#303030;
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_24">
+    <widget class="QPushButton" name="pushButton_28">
      <property name="geometry">
       <rect>
        <x>490</x>
@@ -268,11 +268,11 @@ background:#303030;
       </size>
      </property>
     </widget>
-    <widget class="QLabel" name="label_10">
+    <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>50</y>
+       <x>250</x>
+       <y>40</y>
        <width>251</width>
        <height>51</height>
       </rect>
@@ -290,56 +290,14 @@ background:#303030;
       <string>Room planification</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_25">
-     <property name="geometry">
-      <rect>
-       <x>710</x>
-       <y>120</y>
-       <width>211</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">*{
-color:white;
-border-radius: 15px;
-background:#303030;
-}
-
-*:hover
-{
-	color:#303030;
-	border-radius:15px;
-	background:white
-}</string>
-     </property>
-     <property name="text">
-      <string>Modify Room</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../../../Downloads/touch.png</normaloff>../../../../../Downloads/touch.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-    </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_15">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>30</y>
+      <x>340</x>
+      <y>110</y>
       <width>211</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">

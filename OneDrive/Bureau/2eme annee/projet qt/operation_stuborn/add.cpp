@@ -2,6 +2,7 @@
 #include "ui_add.h"
 #include <QMessageBox>
 #include "room.h"
+
 add::add(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::add)
@@ -35,3 +36,5 @@ void add::on_ADD_clicked()
                         QObject::tr("The room couldn't be added."
                                     "Click Cancel to verify."), QMessageBox::Cancel);
 }
+
+

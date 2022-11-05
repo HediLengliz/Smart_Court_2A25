@@ -18,12 +18,9 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::on_ADD_PUSH_2_clicked()
+void MainWindow::on_ADD_PUSH_4_clicked()
 {
     Add=new add(this);
     Add->show();
 }
-
-
-
 
