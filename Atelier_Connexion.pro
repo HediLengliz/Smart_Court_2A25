@@ -23,16 +23,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 CONFIG += c++11
-
+INCLUDEPATH +=include/
+VPATH +=src/
 SOURCES += \
     aa.cpp \
     aaa.cpp \
     aaaa.cpp \
     aaaaa.cpp \
     aj.cpp \
+    calan.cpp \
+    connection.cpp \
+    mail.cpp \
         main.cpp \
-        mainwindow.cpp \
-    connection.cpp
+    mainwindow.cpp \
+    rech.cpp \
+    smtp.cpp \
+    stapd.cpp
+src/qcustomplot.cpp
 
 HEADERS += \
     aa.h \
@@ -40,17 +47,37 @@ HEADERS += \
     aaaa.h \
     aaaaa.h \
     aj.h \
-        mainwindow.h \
-    connection.h
+    calan.h \
+    mail.h \
+    connection.h \
+    mainwindow.h \
+    rech.h \
+    smtp.h \
+    stapd.h
+include/qcustomplot.h
 
 FORMS += \
         aa.ui \
         aaa.ui \
         aaaa.ui \
         aaaaa.ui \
-        mainwindow.ui
+        calan.ui \
+        mail.ui \
+        mainwindow.ui \
+        rech.ui \
+        stapd.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+SUBDIRS += \
+    SMTPEmail.pro \
+    SMTPEmail.pro \
+    smtp.pro \
+    smtp.pro
+
+DISTFILES += \
+    smtp.exe \
+    smtp.pro.user

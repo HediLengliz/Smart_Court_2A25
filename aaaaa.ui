@@ -207,7 +207,7 @@ border-bottom:1px solid #717072;
 }</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushbutton_1">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -281,6 +281,29 @@ border:none;
 color:white;
 border-bottom:1px solid #717072;
 }</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="le_age">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>280</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>280</y>
+      <width>47</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AGE</string>
     </property>
    </widget>
   </widget>

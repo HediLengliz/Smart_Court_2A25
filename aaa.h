@@ -15,6 +15,13 @@ public:
     explicit aaa(QWidget *parent = nullptr);
     ~aaa();
 
+private slots:
+    void on_aff_clicked();
+
+    void on_pushButton_tri_clicked();
+
+    void on_pushButton_trid_clicked();
+
 private:
     Ui::aaa *ui;
     Aj a;

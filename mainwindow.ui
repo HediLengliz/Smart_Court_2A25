@@ -22,7 +22,7 @@
    <widget class="QFrame" name="Qframe_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>110</x>
       <y>90</y>
       <width>721</width>
       <height>311</height>
@@ -155,10 +155,10 @@ border-bottom:1px solid #717072;
     <widget class="QPushButton" name="hiiii">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>130</y>
-       <width>161</width>
-       <height>41</height>
+       <x>30</x>
+       <y>150</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -186,16 +186,16 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../Desktop/unknown (3).png</normaloff>../../../Desktop/unknown (3).png</iconset>
+       <normaloff>../../unknown (3).png</normaloff>../../unknown (3).png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>130</y>
-       <width>171</width>
-       <height>41</height>
+       <x>30</x>
+       <y>110</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -222,16 +222,16 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../Desktop/unknown (4).png</normaloff>../../../Desktop/unknown (4).png</iconset>
+       <normaloff>../../unknown (4).png</normaloff>../../unknown (4).png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="hkkk">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>130</y>
+       <x>30</x>
+       <y>190</y>
        <width>151</width>
-       <height>41</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -258,16 +258,16 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../Desktop/unknown (2).png</normaloff>../../../Desktop/unknown (2).png</iconset>
+       <normaloff>../../unknown (2).png</normaloff>../../unknown (2).png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="mod">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>130</y>
-       <width>161</width>
-       <height>41</height>
+       <x>30</x>
+       <y>70</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -290,7 +290,72 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../Desktop/unknown (1).png</normaloff>../../../Desktop/unknown (1).png</iconset>
+       <normaloff>../../unknown (1).png</normaloff>../../unknown (1).png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="rechercher">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>60</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>rechercher</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>100</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>pdf</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>140</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>photo</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>180</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CALANDRIER</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>30</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>mailing</string>
      </property>
     </widget>
    </widget>

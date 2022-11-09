@@ -337,9 +337,9 @@ border-bottom:1px solid #717072;
     <property name="geometry">
      <rect>
       <x>274</x>
-      <y>322</y>
+      <y>342</y>
       <width>151</width>
-      <height>51</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -378,6 +378,29 @@ border-bottom:1px solid #717072;
 }</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="le_age1">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>310</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="le_age">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>320</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AGE</string>
+    </property>
+   </widget>
    <zorder>label_8</zorder>
    <zorder>label_7</zorder>
    <zorder>label_9</zorder>
@@ -390,6 +413,8 @@ border-bottom:1px solid #717072;
    <zorder>le_etat</zorder>
    <zorder>pb_ajouter</zorder>
    <zorder>le_etat1</zorder>
+   <zorder>le_age1</zorder>
+   <zorder>le_age</zorder>
   </widget>
  </widget>
  <resources/>
