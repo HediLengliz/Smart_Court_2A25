@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Modify</class>
- <widget class="QDialog" name="Modify">
+ <class>searchpdf</class>
+ <widget class="QDialog" name="searchpdf">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
-    <height>664</height>
+    <width>1015</width>
+    <height>568</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,16 +15,16 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-	background:url(C:/Users/ALA/Desktop/2A/projet/hammerrr.jpg) ;
+background:url(C:/Users/ALA/Desktop/2A/projet/hammerrrm.jpg);
 }</string>
   </property>
   <widget class="QFrame" name="add_employee">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>150</y>
-     <width>501</width>
-     <height>491</height>
+     <x>490</x>
+     <y>20</y>
+     <width>491</width>
+     <height>531</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -59,11 +59,11 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="update">
+   <widget class="QPushButton" name="add_new_employee">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>420</y>
+      <x>140</x>
+      <y>440</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -90,15 +90,151 @@ border: 2px solid #bfbeba;
 }</string>
     </property>
     <property name="text">
-     <string>UPDATE</string>
+     <string>EXIT</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="MCin">
+   <widget class="QPushButton" name="PDF">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>260</x>
+      <y>230</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>PRINT PDF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SCIN">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>140</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>SEARCH (CIN)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SEMAIL">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>SEARCH (E-MAIL)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="MAX">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>SEARCH (MAX SALARY)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LCin">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
       <y>30</y>
-      <width>251</width>
+      <width>291</width>
       <height>31</height>
      </rect>
     </property>
@@ -156,34 +292,12 @@ border-bottom:1px solid #717072;
      <string>CIN</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLineEdit" name="LEmail">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>100</y>
-      <width>91</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-    font-family:century gothic;
-    font-size:24px;
-	color:white;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>E-MAIL</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="MEMAIL">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>110</y>
-      <width>251</width>
+      <x>140</x>
+      <y>70</y>
+      <width>291</width>
       <height>31</height>
      </rect>
     </property>
@@ -216,16 +330,38 @@ border-bottom:1px solid #717072;
      <enum>QLineEdit::Normal</enum>
     </property>
     <property name="placeholderText">
-     <string>123456</string>
+     <string>Aa@aa.aa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+    font-family:century gothic;
+    font-size:24px;
+	color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>E-mail</string>
     </property>
    </widget>
    <widget class="QTableView" name="TabAff">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>160</y>
+      <y>320</y>
       <width>441</width>
-      <height>251</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -262,13 +398,6 @@ border : 1px solid red;
      <number>106</number>
     </attribute>
    </widget>
-   <zorder>label_8</zorder>
-   <zorder>update</zorder>
-   <zorder>label_7</zorder>
-   <zorder>MCin</zorder>
-   <zorder>label_9</zorder>
-   <zorder>MEMAIL</zorder>
-   <zorder>TabAff</zorder>
   </widget>
  </widget>
  <resources/>

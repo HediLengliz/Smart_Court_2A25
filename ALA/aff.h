@@ -5,6 +5,7 @@
 #include <QIntValidator>
 #include <QMessageBox>
 #include "employee.h"
+#include "exportexcelobject.h"
 
 namespace Ui {
 class Aff;
@@ -21,6 +22,8 @@ public:
 private slots:
 
     void on_add_new_employee_clicked();
+
+    void on_ExportExcel_clicked();
 
 private:
     Ui::Aff *ui;

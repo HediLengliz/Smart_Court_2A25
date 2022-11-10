@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Modify</class>
- <widget class="QDialog" name="Modify">
+ <class>Sorting</class>
+ <widget class="QDialog" name="Sorting">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
-    <height>664</height>
+    <width>1010</width>
+    <height>647</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,9 +22,9 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>150</y>
+     <y>40</y>
      <width>501</width>
-     <height>491</height>
+     <height>531</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -59,12 +59,12 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="update">
+   <widget class="QPushButton" name="EXIT">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>420</y>
-      <width>201</width>
+      <x>370</x>
+      <y>460</y>
+      <width>101</width>
       <height>51</height>
      </rect>
     </property>
@@ -90,142 +90,16 @@ border: 2px solid #bfbeba;
 }</string>
     </property>
     <property name="text">
-     <string>UPDATE</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="MCin">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>30</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="acceptDrops">
-     <bool>true</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-background:transparent;
-border:none;
-color:white;
-border-bottom:1px solid #717072;
-}</string>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="maxLength">
-     <number>32767</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="placeholderText">
-     <string>123456</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-    font-family:century gothic;
-    font-size:24px;
-	color:white;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>CIN</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>100</y>
-      <width>91</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-    font-family:century gothic;
-    font-size:24px;
-	color:white;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>E-MAIL</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="MEMAIL">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>110</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="acceptDrops">
-     <bool>true</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-background:transparent;
-border:none;
-color:white;
-border-bottom:1px solid #717072;
-}</string>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="maxLength">
-     <number>32767</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="placeholderText">
-     <string>123456</string>
+     <string>EXIT</string>
     </property>
    </widget>
    <widget class="QTableView" name="TabAff">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>160</y>
+      <x>30</x>
+      <y>30</y>
       <width>441</width>
-      <height>251</height>
+      <height>351</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -262,13 +136,200 @@ border : 1px solid red;
      <number>106</number>
     </attribute>
    </widget>
-   <zorder>label_8</zorder>
-   <zorder>update</zorder>
-   <zorder>label_7</zorder>
-   <zorder>MCin</zorder>
-   <zorder>label_9</zorder>
-   <zorder>MEMAIL</zorder>
-   <zorder>TabAff</zorder>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>400</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+    font-family:century gothic;
+    font-size:24px;
+	color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>MIN</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MIN">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>410</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>123456</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>400</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+    font-family:century gothic;
+    font-size:24px;
+	color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>MAX</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MAX">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>410</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>123456</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SET">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>400</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>SET</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SET_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>460</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>SORT ALL THE EMPLOYEES</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

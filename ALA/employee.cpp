@@ -188,12 +188,195 @@ bool Employee::supprimer(int CIN)
         return false;
 };
 
-bool Employee::modifier()
+bool Employee::modifier(QSqlQueryModel* model)
 {
     QSqlQuery query;
     QString cin_string = QString::number(CIN);
-    query.prepare("UPDATE EMPLOYEE SET CIN =:CIN, E_MAIL=:E_mail where CIN=:CIN");
-    query.bindValue(":E_mail",E_mail);
-    query.bindValue(":CIN",cin_string);
-    return query.exec();
+    int row_count = 0;
+    query.prepare("SELECT * FROM EMPLOYEE where CIN=:CIN");
+    query.bindValue(":CIN",CIN);
+    if (query.exec())
+    {
+        while(query.next() && row_count != 1)
+             row_count++;
+        if(row_count == 1)
+        {
+            afficheremail(model);
+            query.prepare("UPDATE EMPLOYEE SET CIN =:CIN, E_MAIL=:E_mail where CIN=:CIN");
+            query.bindValue(":E_mail",E_mail);
+            query.bindValue(":CIN",cin_string);
+            return query.exec();
+        }
+        else
+            return false;
+    }
+    else
+        return false;
+}
+
+void Employee::afficheremail(QSqlQueryModel* model)
+{
+          model = new QSqlQueryModel();
+          model->setQuery("SELECTCIN, E_MAIL FROM employee");
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
+          model->setHeaderData(1, Qt::Horizontal, QObject::tr("E-MAIL"));
+}
+
+////////////////////////////////////////////////////////////METIERS////////////////////////////////////////////////////////////
+
+QSqlQueryModel* Employee::sorting(int min,int max)
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare("SELECT NOM, PRENOM, CIN, SALARY from EMPLOYEE where SALARY > :min and SALARY < :max order by SALARY ");
+    query.bindValue(":min",min);
+    query.bindValue(":max",max);
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("NAME"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("SURNAME"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("SALARY"));
+    return model;
+}
+
+QSqlQueryModel* Employee::sortingall()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare("SELECT NOM, PRENOM, CIN, SALARY from EMPLOYEE order by SALARY ");
+    query.exec();
+    model->setQuery(query);
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("NAME"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("SURNAME"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("SALARY"));
+    return model;
+}
+
+void Employee::ERROR()
+{
+    QMessageBox::critical(nullptr, QObject::tr("SEARCH FAILED"),
+                QObject::tr("Employee couldn't be founded.\n"
+                            "Click Cancel to exit."), QMessageBox::Cancel);
+}
+
+QSqlQueryModel* Employee::search(int state,int cin,QString email)
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+    QSqlQuery query;
+    int row_count = 0;
+    switch(state)
+    {
+        case 1 :
+            query.prepare("SELECT NOM,PRENOM,CIN,SALARY,CITY,E_MAIL,CODE_PIN FROM EMPLOYEE where SALARY = (SELECT MAX(SALARY) from EMPLOYEE)");
+            break;
+        case 2 :
+            query.prepare("SELECT NOM,PRENOM,CIN,SALARY,CITY,E_MAIL,CODE_PIN FROM EMPLOYEE where CIN=:CIN");
+            query.bindValue(":CIN",cin);
+            break;
+        case 3 :
+            query.prepare("SELECT NOM,PRENOM,CIN,SALARY,CITY,E_MAIL,CODE_PIN FROM EMPLOYEE where E_MAIL=:EMAIL");
+            query.bindValue(":EMAIL",email);
+            break;
+    }
+    if (query.exec())
+    {
+        if(query.next())
+        {
+            setnom(query.value(0).toString());
+            setprenom(query.value(1).toString());
+            setcin(query.value(2).toInt());
+            setsalary(query.value(3).toFloat());
+            setcity(query.value(4).toString());
+            setemail(query.value(5).toString());
+            setcodepin(query.value(6).toInt());
+            query.previous();
+        }
+        while(query.next())
+        {
+            row_count++;
+        }
+        if(row_count == 1)
+        {
+            query.first();
+
+            model->setQuery(query);
+            model->setHeaderData(0, Qt::Horizontal, QObject::tr("NAME"));
+            model->setHeaderData(1, Qt::Horizontal, QObject::tr("SURNAME"));
+            model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+            model->setHeaderData(3, Qt::Horizontal, QObject::tr("SALARY"));
+            model->setHeaderData(4, Qt::Horizontal, QObject::tr("EMAIL"));
+
+        }
+        else
+            ERROR();
+    }
+    else
+       ERROR();
+    return model;
+}
+
+QString Employee::currDate()
+{
+    QDate date = QDate::currentDate();
+    return date.toString("dd.MM.yyyy");
+}
+
+void Employee::pdf()
+{
+    QString html =
+    "<body bgcolor=#bfbeba>"
+        "<div align=right>"
+           "Ariana, "+currDate()+
+        "</div>"
+        "<div align=left>"
+           "Justice League<br>"
+           "Eprit<br>"
+           "Ariana soghra, Ghazela"
+        "</div>"
+        "<h1 align=center style=\"color:#333333\">Informations About "+getnom()+" "+getprenom()+"</h1>"
+        "<p align=justify>"
+           "<br><br><br><br><br><br><br><br><br>"
+           "<b>NOM: </b>"+getnom()+
+           "<br><br><br><b>PRENOM: </b>"+getprenom()+
+           "<br><br><br><b>CIN: </b>"+QString::number(getcin())+
+           "<br><br><br><b>CITY: </b>"+getcity()+
+           "<br><br><br><b>CODEPIN: </b>"+QString::number(getcodepin())+
+            "<br><br><br><b>EMAIL: </b>"+getemail()+
+            "<br><br><br><b>SALARY: </b>"+QString::number(getsalary())+
+        "</p>"
+        "<div align=right>Human Resources</div>"
+        "<div align=center><img src=\"C:/Users/Ala/Desktop/2A/projet/Logo.PNG\" width=\"500\" height=\"400\"></div>"
+    "</body>";
+
+    QTextDocument *document = new QTextDocument();
+    document->setHtml(html);
+
+    QPrinter printer(QPrinter::PrinterResolution);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setPaperSize(QPrinter::A4);
+    printer.setOutputFileName(getnom()+".pdf");
+    printer.setPageMargins(QMarginsF(15, 15, 15, 15));
+
+    document->print(&printer);
+}
+
+bool Employee::verifcin(int cin)
+{
+    QSqlQuery query;
+    int row_count = 0;
+    query.prepare("SELECT * FROM EMPLOYEE where CIN=:CIN");
+    query.bindValue(":CIN",cin);
+    if (query.exec())
+    {
+        while(query.next() && row_count != 1)
+             row_count++;
+        if(row_count == 1)
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
 }

@@ -136,6 +136,40 @@ border : 1px solid red;
      <number>106</number>
     </attribute>
    </widget>
+   <widget class="QPushButton" name="ExportExcel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>460</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>EXPORT EXCEL</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

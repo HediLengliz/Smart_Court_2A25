@@ -6,6 +6,13 @@
 #include <QSqlQueryModel>
 #include <QObject>
 #include <QSqlRecord>
+#include <QMessageBox>
+#include <QtCore>
+#include <QtPrintSupport/QPrinter>
+#include <QtPrintSupport/qprinter.h>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QTextDocument>
 
 struct statistic_obj
 {
@@ -39,7 +46,15 @@ class Employee
         bool ajouter();
         QSqlQueryModel* afficher();
         bool supprimer(int CIN);
-        bool modifier();
+        bool modifier(QSqlQueryModel* model);
+        void afficheremail(QSqlQueryModel* model );
+        QSqlQueryModel* sorting(int min,int max);
+        QSqlQueryModel* sortingall();
+        void ERROR();
+        QSqlQueryModel* search(int state,int cin,QString email);
+        QString currDate();
+        void pdf();
+        bool verifcin(int cin);
 
     private:
         int CIN,Code_Pin;

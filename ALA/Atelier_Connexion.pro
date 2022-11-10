@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,22 +28,32 @@ SOURCES += \
     add.cpp \
     aff.cpp \
     employee.cpp \
+    exportexcelobject.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
     menu.cpp \
     modify.cpp \
-    supp.cpp
+    objective.cpp \
+    searchpdf.cpp \
+    sorting.cpp \
+    supp.cpp \
+    verifcin.cpp
 
 HEADERS += \
     add.h \
     aff.h \
     employee.h \
+    exportexcelobject.h \
         mainwindow.h \
     connection.h \
     menu.h \
     modify.h \
-    supp.h
+    objective.h \
+    searchpdf.h \
+    sorting.h \
+    supp.h \
+    verifcin.h
 
 FORMS += \
         add.ui \
@@ -51,9 +61,15 @@ FORMS += \
         mainwindow.ui \
         menu.ui \
         modify.ui \
-        supp.ui
+        searchpdf.ui \
+        sorting.ui \
+        supp.ui \
+        verifcin.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    recourse.qrc

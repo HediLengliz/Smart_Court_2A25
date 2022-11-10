@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Gestion des Clients</string>
+   <string>MENU</string>
   </property>
   <property name="styleSheet">
    <string notr="true">*{
@@ -26,9 +26,9 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>20</y>
+      <y>10</y>
       <width>211</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
@@ -62,9 +62,9 @@ border-radius: 35px;
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>110</y>
+      <y>90</y>
       <width>731</width>
-      <height>341</height>
+      <height>371</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -125,8 +125,8 @@ border: 2px solid #bfbeba;
     <widget class="QPushButton" name="pushButton_16">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>230</y>
+       <x>340</x>
+       <y>290</y>
        <width>131</width>
        <height>51</height>
       </rect>
@@ -157,9 +157,9 @@ background:#303030;
     <widget class="QLineEdit" name="lineEdit_4">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>240</y>
-       <width>251</width>
+       <x>30</x>
+       <y>300</y>
+       <width>271</width>
        <height>31</height>
       </rect>
      </property>
@@ -325,7 +325,7 @@ background:#303030;
      <property name="geometry">
       <rect>
        <x>490</x>
-       <y>230</y>
+       <y>200</y>
        <width>211</width>
        <height>51</height>
       </rect>
@@ -364,12 +364,143 @@ background:#303030;
       </size>
      </property>
     </widget>
+    <widget class="QPushButton" name="SORT_PUSH">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>200</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border-radius: 15px;
+border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>  Sorting By Salary</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recourse.qrc">
+       <normaloff>:/icons/icons/sort.png</normaloff>:/icons/icons/sort.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>37</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SEARCH_PUSH">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>200</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border: 2px solid #bfbeba;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>SEARCH For Employee</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recourse.qrc">
+       <normaloff>:/icons/icons/loupe.png</normaloff>:/icons/icons/loupe.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>29</width>
+       <height>29</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TODOLIST">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>290</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border-radius: 15px;
+border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>     To-Do-List</string>
+     </property>
+     <property name="icon">
+      <iconset resource="recourse.qrc">
+       <normaloff>:/icons/icons/ToDoList.png</normaloff>:/icons/icons/ToDoList.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>29</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <zorder>Qframe</zorder>
    <zorder>pushButton_15</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="recourse.qrc"/>
+ </resources>
  <connections/>
 </ui>

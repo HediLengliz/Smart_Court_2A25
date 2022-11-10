@@ -17,16 +17,19 @@ void Modify::on_update_clicked()
 {
     int cin = ui->MCin ->text().toInt();
     QString email = ui-> MEMAIL ->text();
+    QSqlQueryModel *model;
+    model = new QSqlQueryModel();
     Employee E(cin,email);
-    if (E.modifier())
+    if (E.modifier(model))
     {
+        ui->TabAff->setModel(model);
         QMessageBox::information(nullptr, QObject::tr("SUCCESS"),
-                    QObject::tr("The employee has been added successfully.\n"
+                    QObject::tr("The employee has been mmodified successfully.\n"
                                 "Click OK to exit"), QMessageBox::Ok);
         hide();
     }
     else
         QMessageBox::critical(nullptr, QObject::tr("Failed"),
-                    QObject::tr("The employee couldn't be added.\nMake sure that : \n1- CIN and E-MAIL hasn't been used before\n2- E-MAIL is written like \"AA@aa.xx\"\nReport it if there is any error\n"
+                    QObject::tr("The employee couldn't be modified.\nMake sure that : \n1- CIN and E-MAIL exists \n2- E-MAIL is written like \"AA@aa.xx\"\nReport it if there is any error\n"
                                 "Click Cancel to verify."), QMessageBox::Cancel);
 }

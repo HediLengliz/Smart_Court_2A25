@@ -6,6 +6,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    a.setWindowIcon(QIcon("C:/Users/Ala/Desktop/2A/Projjeeet/Atelier_Connexion/icons/Logo.ico"));
     MainWindow w;
     Connection c;
     menu x;

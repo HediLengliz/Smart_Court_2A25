@@ -36,3 +36,21 @@ void MainWindow::on_MOD_PUSH_clicked()
     mod = new Modify(this);
     mod->show();
 }
+
+void MainWindow::on_SORT_PUSH_clicked()
+{
+    sorting = new Sorting(this);
+    sorting->show();
+}
+
+void MainWindow::on_SEARCH_PUSH_clicked()
+{
+    Searchpdf = new searchpdf(this);
+    Searchpdf->show();
+}
+
+void MainWindow::on_TODOLIST_clicked()
+{
+    Verifcin = new verifcin(this);
+    Verifcin->show();
+}
