@@ -1,6 +1,6 @@
 <ui version="4.0">
- <class>delete</class>
- <widget name="delete" class="QDialog">
+ <class>add</class>
+ <widget class="QDialog" name="add">
   <property name="geometry">
    <rect>
     <x>0</x>

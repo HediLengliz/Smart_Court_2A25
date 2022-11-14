@@ -16,12 +16,13 @@ public:
     ~dell();
 
 private slots:
-    void on_DELL_clicked();
+    void on_DELETE_clicked();
 
 private:
     Ui::dell *ui;
     dell* Dell;
-    room r;
+    room r ;
+
 };
 
 #endif // DELL_H

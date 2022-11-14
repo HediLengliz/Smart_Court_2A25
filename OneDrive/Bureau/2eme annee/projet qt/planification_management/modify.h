@@ -16,9 +16,9 @@ public:
     ~Modify();
 
 private slots:
-    void on_MOD_clicked();
+    void on_MOD_2_clicked();
 
-    void on_SAVE_clicked();
+    void on_dateEdit_userDateChanged(const QDate &date);
 
 private:
     Ui::Modify *ui;

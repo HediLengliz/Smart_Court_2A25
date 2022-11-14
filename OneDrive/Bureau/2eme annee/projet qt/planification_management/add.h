@@ -20,7 +20,6 @@ private slots:
 
 private:
     Ui::add *ui;
-    add* Add;
 };
 
 #endif // ADD_H

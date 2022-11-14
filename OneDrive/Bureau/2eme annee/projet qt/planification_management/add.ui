@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>784</width>
-    <height>656</height>
+    <width>969</width>
+    <height>622</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,16 +15,16 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-    background:url(C:/Users/hedi2/downloads/hamer.jpg) ;
+background:url(C:/Users/hedi2/downloads/hamer.jpg)
 }</string>
   </property>
-  <widget class="QFrame" name="add_employee">
+  <widget class="QFrame" name="add_room">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>30</y>
-     <width>501</width>
-     <height>531</height>
+     <x>150</x>
+     <y>10</y>
+     <width>581</width>
+     <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -56,20 +56,31 @@
     </property>
     <property name="styleSheet">
      <string notr="true">*{
-color:white;
+color:black;
 border-radius: 15px;
-background:#303030;
+background:white
+;
 }
 
 *:hover
 {
-	color:#303030;
+	color:white;
 	border-radius:15px;
-	background:white
+	background:#303030;
 }</string>
     </property>
     <property name="text">
      <string>ADD</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloads/plus.png</normaloff>../../../../../Downloads/plus.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
     </property>
    </widget>
    <widget class="QLineEdit" name="LRI">
@@ -409,22 +420,14 @@ border-bottom:1px solid #717072;
      <string>Aa</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LCD">
+   <widget class="QDateEdit" name="dateEdit">
     <property name="geometry">
      <rect>
       <x>220</x>
       <y>270</y>
-      <width>251</width>
+      <width>261</width>
       <height>31</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="acceptDrops">
-     <bool>true</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">*{
@@ -433,21 +436,6 @@ border:none;
 color:white;
 border-bottom:1px solid #717072;
 }</string>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="maxLength">
-     <number>32767</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="placeholderText">
-     <string>Aa</string>
     </property>
    </widget>
    <zorder>ADD</zorder>
@@ -462,7 +450,7 @@ border-bottom:1px solid #717072;
    <zorder>CD</zorder>
    <zorder>RS</zorder>
    <zorder>LRS</zorder>
-   <zorder>LCD</zorder>
+   <zorder>dateEdit</zorder>
   </widget>
  </widget>
  <resources/>

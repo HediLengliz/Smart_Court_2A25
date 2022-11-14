@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>897</width>
-    <height>564</height>
+    <width>839</width>
+    <height>555</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,16 +15,16 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-    background:url(C:/Users/hedi2/downloads/hamer.jpg) ;
+background:url(C:/Users/hedi2/downloads/hamer.jpg)
 }</string>
   </property>
-  <widget class="QFrame" name="add_employee">
+  <widget class="QFrame" name="DELL">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>70</x>
      <y>90</y>
-     <width>501</width>
-     <height>411</height>
+     <width>601</width>
+     <height>321</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -40,11 +40,11 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="DELL">
+   <widget class="QPushButton" name="DELETE">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>240</y>
+      <x>330</x>
+      <y>200</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -71,12 +71,22 @@ background:#303030;
     <property name="text">
      <string>Delete</string>
     </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloads/x-mark.png</normaloff>../../../../../Downloads/x-mark.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>20</height>
+     </size>
+    </property>
    </widget>
    <widget class="QLineEdit" name="LRI">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>160</y>
+      <x>280</x>
+      <y>70</y>
       <width>251</width>
       <height>31</height>
      </rect>
@@ -116,8 +126,8 @@ border-bottom:1px solid #717072;
    <widget class="QLabel" name="RID">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>150</y>
+      <x>80</x>
+      <y>60</y>
       <width>121</width>
       <height>51</height>
      </rect>
@@ -132,10 +142,10 @@ border-bottom:1px solid #717072;
 </string>
     </property>
     <property name="text">
-     <string>Room ID</string>
+     <string>Room ID :</string>
     </property>
    </widget>
-   <zorder>DELL</zorder>
+   <zorder>DELETE</zorder>
    <zorder>RID</zorder>
    <zorder>LRI</zorder>
   </widget>

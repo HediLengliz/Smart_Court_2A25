@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,14 +16,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    add.cpp \
+    connection.cpp \
+    dell.cpp \
+    display.cpp \
+    mail.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    modify.cpp \
+    room.cpp
 
 HEADERS += \
-    mainwindow.h
+    add.h \
+    connection.h \
+    dell.h \
+    display.h \
+    mail.h \
+    mainwindow.h \
+    modify.h \
+    room.h
 
 FORMS += \
-    mainwindow.ui
+    add.ui \
+    dell.ui \
+    display.ui \
+    mail.ui \
+    mainwindow.ui \
+    modify.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>991</width>
-    <height>626</height>
+    <width>918</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,16 +15,16 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-    background:url(C:/Users/hedi2/downloads/hamer.jpg) ;
+background:url(C:/Users/hedi2/downloads/hamer.jpg)
 }</string>
   </property>
-  <widget class="QFrame" name="add_employee">
+  <widget class="QFrame" name="MOD">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>50</y>
-     <width>501</width>
-     <height>531</height>
+     <x>150</x>
+     <y>20</y>
+     <width>581</width>
+     <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -40,11 +40,11 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="MOD">
+   <widget class="QPushButton" name="MOD_2">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>450</y>
+      <x>270</x>
+      <y>460</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -56,61 +56,31 @@
     </property>
     <property name="styleSheet">
      <string notr="true">*{
-color:white;
+color:black;
 border-radius: 15px;
-background:#303030;
+background:white
+;
 }
 
 *:hover
 {
-	color:#303030;
+	color:white;
 	border-radius:15px;
-	background:white
+	background:#303030;
 }</string>
     </property>
     <property name="text">
-     <string>Modify</string>
+     <string>Modify </string>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="LRI">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>30</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloads/editing.png</normaloff>../../../../../Downloads/editing.png</iconset>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="acceptDrops">
-     <bool>true</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-background:transparent;
-border:none;
-color:white;
-border-bottom:1px solid #717072;
-}</string>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="maxLength">
-     <number>32767</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="placeholderText">
-     <string>123456</string>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>20</height>
+     </size>
     </property>
    </widget>
    <widget class="QLabel" name="RID">
@@ -157,10 +127,10 @@ border-bottom:1px solid #717072;
      <string>Pin Code</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LCP">
+   <widget class="QLineEdit" name="LCP_m">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>270</x>
       <y>90</y>
       <width>251</width>
       <height>31</height>
@@ -220,10 +190,10 @@ border-bottom:1px solid #717072;
      <string>Room Number</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LRN">
+   <widget class="QLineEdit" name="LRN_m">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>270</x>
       <y>150</y>
       <width>251</width>
       <height>31</height>
@@ -283,10 +253,10 @@ border-bottom:1px solid #717072;
      <string>Room Type</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LRT">
+   <widget class="QLineEdit" name="LRT_m">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>270</x>
       <y>210</y>
       <width>251</width>
       <height>31</height>
@@ -368,10 +338,10 @@ border-bottom:1px solid #717072;
      <string>Room State</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LRS">
+   <widget class="QLineEdit" name="LRS_m">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>270</x>
       <y>330</y>
       <width>251</width>
       <height>31</height>
@@ -409,22 +379,32 @@ border-bottom:1px solid #717072;
      <string>Aa</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LCD">
+   <widget class="QComboBox" name="comboRoom">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>270</y>
+      <x>270</x>
+      <y>30</y>
       <width>251</width>
-      <height>31</height>
+      <height>30</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
     </property>
-    <property name="acceptDrops">
-     <bool>true</bool>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit_m">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>280</y>
+      <width>251</width>
+      <height>22</height>
+     </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">*{
@@ -434,35 +414,7 @@ color:white;
 border-bottom:1px solid #717072;
 }</string>
     </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="maxLength">
-     <number>32767</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="placeholderText">
-     <string>Aa</string>
-    </property>
    </widget>
-   <zorder>MOD</zorder>
-   <zorder>RID</zorder>
-   <zorder>pc</zorder>
-   <zorder>LRI</zorder>
-   <zorder>LCP</zorder>
-   <zorder>RN</zorder>
-   <zorder>LRN</zorder>
-   <zorder>RT</zorder>
-   <zorder>LRT</zorder>
-   <zorder>CD</zorder>
-   <zorder>RS</zorder>
-   <zorder>LRS</zorder>
-   <zorder>LCD</zorder>
   </widget>
  </widget>
  <resources/>

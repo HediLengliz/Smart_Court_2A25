@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>681</height>
+    <width>1368</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,16 +15,16 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-    background:url(C:/Users/hedi2/downloads/hamer.jpg) ;
+background:url(C:/Users/hedi2/downloads/hamer.jpg)
 }</string>
   </property>
-  <widget class="QFrame" name="add_employee">
+  <widget class="QFrame" name="Display">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>100</y>
-     <width>901</width>
-     <height>511</height>
+     <x>20</x>
+     <y>50</y>
+     <width>941</width>
+     <height>611</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -40,45 +40,23 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="DISPLAY">
+   <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>240</y>
-      <width>201</width>
-      <height>51</height>
+      <x>0</x>
+      <y>0</y>
+      <width>941</width>
+      <height>611</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-color:white;
-border-radius: 15px;
-background:#303030;
-}
-
-*:hover
-{
-	color:#303030;
-	border-radius:15px;
-	background:white
-}</string>
-    </property>
-    <property name="text">
-     <string>Display</string>
-    </property>
    </widget>
-   <widget class="QLineEdit" name="LRI">
+   <widget class="QLineEdit" name="LRN">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>160</y>
-      <width>251</width>
-      <height>31</height>
+      <x>80</x>
+      <y>460</y>
+      <width>551</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -95,7 +73,14 @@ background:transparent;
 border:none;
 color:white;
 border-bottom:1px solid #717072;
-}</string>
+ border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+
+}
+</string>
     </property>
     <property name="inputMask">
      <string/>
@@ -109,52 +94,222 @@ border-bottom:1px solid #717072;
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
     <property name="placeholderText">
-     <string>123456</string>
+     <string>type here to  search...</string>
+    </property>
+    <property name="cursorMoveStyle">
+     <enum>Qt::VisualMoveStyle</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="RID">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>150</y>
-      <width>121</width>
-      <height>51</height>
+      <x>700</x>
+      <y>460</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:white
+;
+}
+
+*:hover
+{
+	color:white;
+	border-radius:15px;
+	background:#303030;
+}</string>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloads/x-mark.png</normaloff>../../../../../Downloads/x-mark.png</iconset>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>180</y>
+      <width>101</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">*{
-    font-family:century gothic;
-    font-size:24px;
-	color:white;
-}
-
-</string>
+color:black;
+border-radius: 15px;
+background:51556e;
+;
+}</string>
     </property>
     <property name="text">
-     <string>Room ID</string>
+     <string>Sort By ID</string>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QPushButton" name="PDF">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>901</width>
-      <height>511</height>
+      <x>700</x>
+      <y>390</y>
+      <width>171</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
-    <property name="sizeAdjustPolicy">
-     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:white
+;
+}
+
+*:hover
+{
+	color:white;
+	border-radius:15px;
+	background:#303030;
+}</string>
+    </property>
+    <property name="text">
+     <string>PDF</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloads/pdf.png</normaloff>../../../../../Downloads/pdf.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
     </property>
    </widget>
-   <zorder>DISPLAY</zorder>
-   <zorder>RID</zorder>
-   <zorder>LRI</zorder>
-   <zorder>tableView</zorder>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>210</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:51556e;
+;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort By PINCODE</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_3">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>240</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:51556e;
+;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort By NUMBER</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_4">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>270</y>
+      <width>97</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:51556e;
+;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort By TYPE</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_5">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>300</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:51556e;
+;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort By DATE</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_6">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>330</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:51556e;
+;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort By STATE</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
