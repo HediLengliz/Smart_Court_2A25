@@ -60,8 +60,8 @@ void Qrcode::on_GetQR_clicked()
                    {QPixmap pix2007("C:/Users/MAHOX/OneDrive/Desktop/QR/2007.png");
                        ui->tabQr->setPixmap(pix2007);}
                    else
-                   { QMessageBox::information(this, QObject::tr("Accusé Introuvable!"),
-                                               QObject::tr("Accusé Introuvable!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
+                   { QMessageBox::information(this, QObject::tr("Not found Accused!"),
+                                               QObject::tr("Not found Accused!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
 }
                }
 

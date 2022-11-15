@@ -23,18 +23,14 @@ Delete::~Delete()
 
 void Delete::on_supp_btn_clicked()
 {
-
-//A.setid((ui->Lsupp->text().toInt()));
-
-int id=ui->Lsupp->text().toInt();
-
-//bool test=A.supprimer(A.getid());
-//bool test=A.supprimer(id);
-
+QSqlQuery query;
 QMessageBox msgBox;
 
 
- if(A.supprimer(id))
+int id=ui->Lsupp->text().toInt();
+if(A.rech(id))
+{
+if(A.supprimer(id))
     {
 
         QMessageBox::information(nullptr, QObject::tr("database is open"),
@@ -46,4 +42,11 @@ QMessageBox msgBox;
            { QMessageBox::critical(nullptr, QObject::tr("database is not open"),
                         QObject::tr("Delete failed \n"
                                     "Click Cancel to exit."), QMessageBox::Cancel);}
+}
+else{ QMessageBox::critical(nullptr, QObject::tr("Not found"),
+                            QObject::tr("Not found \n"
+                                        "Click Cancel to exit."), QMessageBox::Cancel);}
+
+
+
 }

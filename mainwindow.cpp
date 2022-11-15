@@ -16,7 +16,7 @@
 #include <QtPrintSupport/QPrinter>
 #include <QFileDialog>
 #include <QTextDocument>
-#include <strstream>
+//#include <strstream>
 #include <QSystemTrayIcon>
 #include <QRegExpValidator>
 #include <QDesktopServices>
@@ -25,6 +25,7 @@
 #include <QFile>
 #include <QCoreApplication>
 #include <QTextStream>
+#include "statistique.h"
 
 //Test Git
 
@@ -151,4 +152,11 @@ void MainWindow::on_MAIL_clicked()
 {
     ml=new Mail(this);
     ml->show();
+}
+
+
+void MainWindow::on_Stats_clicked()
+{
+    st=new statistique(this);
+    st->show();
 }

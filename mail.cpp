@@ -6,6 +6,7 @@
 #include <QStringList>
 #include <QTextEdit>
 //#include <QSslSocket>
+//#include <QAbstractSocket>
 
 Mail::Mail(QWidget *parent) :
     QDialog(parent),

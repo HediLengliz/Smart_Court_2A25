@@ -47,7 +47,8 @@ void Modify::on_modify_clicked()
 
     Accuse A(id, name,lastname, gender, Date_B, acc_cause, Date_S);
 
-
+    if(A.rech(id))
+{
         bool test=A.modifier(id,name,lastname,gender,Date_B,acc_cause,Date_S);
 
         if(test)
@@ -66,4 +67,11 @@ void Modify::on_modify_clicked()
                                                            "Click Cancel to exit ."),QMessageBox::Cancel);
               }
 }
+    else
+    {QMessageBox::critical(nullptr, QObject::tr("Not found Accused"),
+                           QObject::tr("Not found Accused \n"
+                                       "Click Cancel to exit."), QMessageBox::Cancel);}
+
+
+    }
 

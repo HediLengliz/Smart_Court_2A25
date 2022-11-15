@@ -45,7 +45,7 @@ background:#303030;
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../Images_projet/AffLogo.png</normaloff>../../Images_projet/AffLogo.png</iconset>
+      <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/AffLogo.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/AffLogo.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -111,7 +111,7 @@ background:#303030;
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>D:/QTprojet/smart court.png</pixmap>
+      <pixmap>../QTprojet/smart court.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -189,7 +189,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/Add.png</normaloff>../../Images_projet/Add.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Add.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Add.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -231,7 +231,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/Delete.png</normaloff>../../Images_projet/Delete.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Delete.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Delete.png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="List_ACC">
@@ -267,7 +267,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/Display.png</normaloff>../../Images_projet/Display.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Display.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Display.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -309,7 +309,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/report.png</normaloff>../../Images_projet/report.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/report.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/report.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -351,7 +351,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/Modify.png</normaloff>../../Images_projet/Modify.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Modify.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Modify.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -393,7 +393,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/Qr code.png</normaloff>../../Images_projet/Qr code.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Qr code.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Qr code.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -435,7 +435,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/srch.png</normaloff>../../Images_projet/srch.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/srch.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/srch.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -477,7 +477,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/tri.png</normaloff>../../Images_projet/tri.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/tri.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/tri.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -519,7 +519,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/pdf.png</normaloff>../../Images_projet/pdf.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/pdf.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/pdf.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -561,7 +561,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/upload.png</normaloff>../../Images_projet/upload.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/upload.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/upload.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -573,7 +573,7 @@ background:#303030;
     <widget class="QPushButton" name="MAIL">
      <property name="geometry">
       <rect>
-       <x>240</x>
+       <x>10</x>
        <y>320</y>
        <width>201</width>
        <height>51</height>
@@ -603,12 +603,54 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../Images_projet/Email.png</normaloff>../../Images_projet/Email.png</iconset>
+       <normaloff>../Images_projet/Email.png</normaloff>../Images_projet/Email.png</iconset>
      </property>
      <property name="iconSize">
       <size>
        <width>68</width>
        <height>68</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Stats">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>320</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+     </property>
+     <property name="text">
+      <string>Stats</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Stats.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Stats.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
       </size>
      </property>
     </widget>

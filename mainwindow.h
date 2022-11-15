@@ -11,6 +11,7 @@
 #include <tri.h>
 #include <results.h>
 #include <mail.h>
+#include <statistique.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -47,6 +48,8 @@ private slots:
 
     void on_MAIL_clicked();
 
+    void on_Stats_clicked();
+
 private:
     Ui::MainWindow *ui;
     Dialog *d;
@@ -58,5 +61,6 @@ private:
     tri *tr1;
     results *rs;
     Mail *ml;
+    statistique *st;
 };
 #endif // MAINWINDOW_H

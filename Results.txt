@@ -2,3 +2,5 @@ ID:  2002         Result Of session:  Innosance
 ID:  2004         Result Of session:  5 years of prison
 ID:  2007         Result Of session:  10 years of prison
 ID:  2005         Result Of session:  Innosance
+ID:  2007         Result Of session:  5 years 
+ID:  2006         Result Of session:  4 years of prison

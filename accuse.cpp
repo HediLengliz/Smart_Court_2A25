@@ -6,6 +6,7 @@
 #include <QString>
 #include <QSqlQueryModel>
 #include <QObject>
+#include <QSqlRecord>
 //Test Git
 Accuse::Accuse()
 {
@@ -233,3 +234,25 @@ QSqlQueryModel *Accuse:: tri()
  return model;
 
 }
+
+bool Accuse::rech(int id){
+
+
+
+    QSqlQuery q("select * from accuse where  id = "+QString::number(id) );
+      QSqlRecord rec = q.record();
+
+      qDebug() << "Number of columns: " << rec.count();
+
+      int nameCol = rec.indexOf("id"); // index of the field "name"
+      while (q.next()){
+
+          qDebug() << q.value(nameCol).toString();
+          QString a= q.value(nameCol).toString();
+          if(a!=""){
+
+                return true;
+
+}
+}
+        return false;  }

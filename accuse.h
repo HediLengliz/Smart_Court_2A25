@@ -32,6 +32,8 @@ public:
     bool modifier(int ,QString ,QString ,QString ,QDate ,QString ,QDate);
     QSqlQueryModel * recherche(int );
     QSqlQueryModel * tri();
+    bool rech(int id);
+
 private:
     int id;
     QString name,lastname,acc_cause,gender;

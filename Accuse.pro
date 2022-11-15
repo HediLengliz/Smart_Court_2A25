@@ -1,5 +1,5 @@
 QT       += core gui
-QT += sql
+QT += sql charts printsupport widgets axcontainer
 QT += gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -30,6 +30,7 @@ SOURCES += \
     qrcode.cpp \
     recherche.cpp \
     results.cpp \
+    statistique.cpp \
     tri.cpp
 
 HEADERS += \
@@ -44,6 +45,7 @@ HEADERS += \
     qrcode.h \
     recherche.h \
     results.h \
+    statistique.h \
     tri.h
 
 FORMS += \
@@ -56,6 +58,7 @@ FORMS += \
     qrcode.ui \
     recherche.ui \
     results.ui \
+    statistique.ui \
     tri.ui
 
 # Default rules for deployment.
