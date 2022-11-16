@@ -159,4 +159,5 @@ void MainWindow::on_Stats_clicked()
 {
     st=new statistique(this);
     st->show();
+    st->exec();
 }

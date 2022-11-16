@@ -603,7 +603,7 @@ background:#303030;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../Images_projet/Email.png</normaloff>../Images_projet/Email.png</iconset>
+       <normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Email.png</normaloff>C:/Users/MAHOX/OneDrive/Desktop/Images_projet/Email.png</iconset>
      </property>
      <property name="iconSize">
       <size>
