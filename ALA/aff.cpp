@@ -1,5 +1,7 @@
 #include "aff.h"
 #include "ui_aff.h"
+#include <QUrl>
+#include <QDesktopServices>
 
 Aff::Aff(QWidget *parent) :
     QDialog(parent),
@@ -21,8 +23,11 @@ void Aff::on_add_new_employee_clicked()
 
 void Aff::on_ExportExcel_clicked()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Excel file"), qApp->applicationDirPath (),
-                                                    tr("Excel Files (*.xls)"));
+    if (!E.isempty())
+        QMessageBox::information(this, tr("Done"),
+                                 QString(tr("no records exported!"))
+                                 );
+    QString fileName = "C:/Users/Ala/Desktop/Projjeeet/build-Atelier_Connexion-Desktop_Qt_5_9_9_MinGW_32bit-Debug/Employee.xls";
     if (fileName.isEmpty())
         return;
 
@@ -42,4 +47,10 @@ void Aff::on_ExportExcel_clicked()
                                  QString(tr("%1 records exported!")).arg(retVal)
                                  );
     }
+}
+
+void Aff::on_ImportExcel_clicked()
+{
+    QString ExcelFileName  = "C:/Users/Ala/Downloads/libxl-win-4.0.4/libxl-4.0.4.0/examples/c++/code.blocks/BFF.xlsx";
+    QDesktopServices::openUrl(QUrl(ExcelFileName, QUrl::TolerantMode));
 }

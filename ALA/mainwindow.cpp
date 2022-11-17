@@ -51,6 +51,6 @@ void MainWindow::on_SEARCH_PUSH_clicked()
 
 void MainWindow::on_TODOLIST_clicked()
 {
-    Verifcin = new verifcin(this);
-    Verifcin->show();
+    task = new Task(this);
+    task->open();
 }

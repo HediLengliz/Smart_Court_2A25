@@ -3,6 +3,9 @@
 
 #include <QDialog>
 #include "employee.h"
+#include "exportexcelobject.h"
+#include <QDesktopServices>
+#include <QUrl>
 
 namespace Ui {
 class Sorting;
@@ -15,6 +18,7 @@ class Sorting : public QDialog
 public:
     explicit Sorting(QWidget *parent = nullptr);
     ~Sorting();
+    int n=0;
 
 private slots:
     void on_SET_clicked();
@@ -22,6 +26,10 @@ private slots:
     void on_EXIT_clicked();
 
     void on_SET_2_clicked();
+
+    void on_ExportExcel_clicked();
+
+    void on_ImportExcel_clicked();
 
 private:
     Ui::Sorting *ui;

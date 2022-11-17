@@ -12,13 +12,15 @@ Employee::Employee()
     Prenom = "N/A";
     E_mail = "N/A";
     City = "N/A";
+    Abs = 0;
     S_Obj.succ = 0;
     S_Obj.fail = 0;
     S_Obj.somme = 0;
     S_Obj.pourc = -1;
+    ns = 0;
 }
 
-Employee::Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city)
+Employee::Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city,int NOMBRESCEANCE)
 {
     CIN = cin;
     Code_Pin = codepin;
@@ -31,6 +33,8 @@ Employee::Employee(int cin,int codepin,float salary,QString nom,QString prenom,Q
     S_Obj.fail = 0;
     S_Obj.somme = 0;
     S_Obj.pourc = -1;
+    ns = NOMBRESCEANCE;
+    Abs = 0;
 };
 
 Employee::Employee(int cin,QString email)
@@ -137,7 +141,8 @@ bool Employee::ajouter()
     QString objfail_string = QString::number(S_Obj.fail);
     QString objsom_string = QString::number(S_Obj.somme);
     QString objpourc_string = QString::number(S_Obj.pourc);
-    query.prepare("INSERT INTO EMPLOYEE (CIN, CODE_PIN, SALARY, NOM, PRENOM, E_MAIL, CITY)"  "VALUES (:CIN ,:Code_Pin ,:Salary, :Nom , :Prenom, :E_mail , :City)"   );
+    QString objns = QString::number(ns);
+    query.prepare("INSERT INTO EMPLOYEE (CIN, CODE_PIN, SALARY, NOM, PRENOM, E_MAIL, CITY, NOMBRESCEANCE, ABSENCE)"  "VALUES (:CIN ,:Code_Pin ,:Salary, :Nom , :Prenom, :E_mail , :City, :NOMBRESCEANCE, :ABSENCE)");
     query.bindValue(":CIN",cin_string);
     query.bindValue(":Code_Pin",codepin_string);
     query.bindValue(":Salary",salary_string);
@@ -145,10 +150,8 @@ bool Employee::ajouter()
     query.bindValue(":Prenom",Prenom);
     query.bindValue(":E_mail",E_mail);
     query.bindValue(":City",City);
-    /*query.bindValue(8,S_Obj.succ);
-    query.bindValue(9,S_Obj.fail);
-    query.bindValue(10,S_Obj.somme);
-    query.bindValue(11,S_Obj.pourc);*/
+    query.bindValue(":NOMBRESCEANCE",ns);
+    query.bindValue(":ABSENCE",Abs);
     return query.exec();
 }
 
@@ -160,7 +163,6 @@ QSqlQueryModel* Employee::afficher()
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("SURNAME"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
           model->setHeaderData(3, Qt::Horizontal, QObject::tr("E-MAIL"));
-
     return model;
 };
 
@@ -224,33 +226,49 @@ void Employee::afficheremail(QSqlQueryModel* model)
 
 ////////////////////////////////////////////////////////////METIERS////////////////////////////////////////////////////////////
 
-QSqlQueryModel* Employee::sorting(int min,int max)
+QSqlQueryModel* Employee::sorting(int min,int max,int* n)
 {
     QSqlQueryModel* model = new QSqlQueryModel();
     QSqlQuery query;
-    query.prepare("SELECT NOM, PRENOM, CIN, SALARY from EMPLOYEE where SALARY > :min and SALARY < :max order by SALARY ");
+    query.prepare("SELECT NOM, PRENOM, CIN, NOMBRESCEANCE, ABSENCE, SALARY from EMPLOYEE where SALARY > :min and SALARY < :max order by SALARY ");
     query.bindValue(":min",min);
     query.bindValue(":max",max);
     query.exec();
+    *n = 0;
+    while(query.next())
+    {
+        (*n)++;
+    }
+    query.first();
     model->setQuery(query);
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("NAME"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("SURNAME"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("SALARY"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("N/SESSIONS"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("ABSENCE"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("SALARY"));
     return model;
 }
 
-QSqlQueryModel* Employee::sortingall()
+QSqlQueryModel* Employee::sortingall(int* n)
 {
     QSqlQueryModel* model = new QSqlQueryModel();
     QSqlQuery query;
-    query.prepare("SELECT NOM, PRENOM, CIN, SALARY from EMPLOYEE order by SALARY ");
+    query.prepare("SELECT NOM, PRENOM, CIN, NOMBRESCEANCE, ABSENCE, SALARY from EMPLOYEE order by SALARY ");
     query.exec();
+    *n = 0;
+    while(query.next())
+    {
+        *n = *n + 1;
+    }
+    query.first();
     model->setQuery(query);
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("NAME"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("SURNAME"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("SALARY"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("N/SESSIONS"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("ABSENCE"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("SALARY"));
     return model;
 }
 
@@ -373,6 +391,24 @@ bool Employee::verifcin(int cin)
         while(query.next() && row_count != 1)
              row_count++;
         if(row_count == 1)
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
+}
+
+bool Employee::isempty()
+{
+    QSqlQuery query;
+    int row_count = 0;
+    query.prepare("SELECT * FROM EMPLOYEE");
+    if (query.exec())
+    {
+        while(query.next() && row_count != 1)
+             row_count++;
+        if(row_count != 0)
             return true;
         else
             return false;

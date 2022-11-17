@@ -15,6 +15,11 @@ public:
     bool ajouter();
     QSqlQueryModel* afficher();
     void modifydone(QString id, int n);
+    bool verifdate(QString id);
+    bool del(QString id);
+    QSqlQueryModel* objemployee(QString cin);
+    bool verifemp(int cin);
+    void stat(int* sum,float* fin,float* unfin,float* doi,float* tod,QString cin);
 private:
     int ID_OBJ,CIN;
     QString DESC,STATE,ID_ROOM;

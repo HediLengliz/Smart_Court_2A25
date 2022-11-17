@@ -27,10 +27,10 @@
   <widget class="QFrame" name="add_employee">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
+     <x>20</x>
+     <y>10</y>
      <width>501</width>
-     <height>531</height>
+     <height>571</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -68,9 +68,9 @@
    <widget class="QPushButton" name="add_new_employee">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>460</y>
-      <width>201</width>
+      <x>310</x>
+      <y>510</y>
+      <width>161</width>
       <height>51</height>
      </rect>
     </property>
@@ -540,6 +540,69 @@ border-bottom:1px solid #717072;
      <string>123</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>440</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+    font-family:century gothic;
+    font-size:24px;
+	color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Number of sessions</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LNS">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>450</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>123</string>
+    </property>
+   </widget>
    <zorder>label_8</zorder>
    <zorder>add_new_employee</zorder>
    <zorder>label_7</zorder>
@@ -556,6 +619,8 @@ border-bottom:1px solid #717072;
    <zorder>LCity</zorder>
    <zorder>label_14</zorder>
    <zorder>LSalary</zorder>
+   <zorder>label_15</zorder>
+   <zorder>LNS</zorder>
   </widget>
  </widget>
  <resources/>

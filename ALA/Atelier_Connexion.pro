@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql printsupport
+QT       += core gui sql printsupport charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,6 +27,7 @@ CONFIG += c++11
 SOURCES += \
     add.cpp \
     aff.cpp \
+    cihart.cpp \
     employee.cpp \
     exportexcelobject.cpp \
         main.cpp \
@@ -38,11 +39,14 @@ SOURCES += \
     searchpdf.cpp \
     sorting.cpp \
     supp.cpp \
+    task.cpp \
+    todoja.cpp \
     verifcin.cpp
 
 HEADERS += \
     add.h \
     aff.h \
+    cihart.h \
     employee.h \
     exportexcelobject.h \
         mainwindow.h \
@@ -53,17 +57,22 @@ HEADERS += \
     searchpdf.h \
     sorting.h \
     supp.h \
+    task.h \
+    todoja.h \
     verifcin.h
 
 FORMS += \
         add.ui \
         aff.ui \
+        cihart.ui \
         mainwindow.ui \
         menu.ui \
         modify.ui \
         searchpdf.ui \
         sorting.ui \
         supp.ui \
+        task.ui \
+        todoja.ui \
         verifcin.ui
 
 # Default rules for deployment.

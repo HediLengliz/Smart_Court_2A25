@@ -24,7 +24,8 @@ void Add::on_add_new_employee_clicked()
     QString prenom = ui->LSurname->text();
     QString email = ui->LEmail->text();
     QString city = ui->LCity->text();
-    Employee E(cin,codepin,salary,nom,prenom,email,city);
+    int ns = ui->LNS->text().toInt();
+    Employee E(cin,codepin,salary,nom,prenom,email,city,ns);
     if (E.ajouter())
     {
         QMessageBox::information(nullptr, QObject::tr("SUCCESS"),

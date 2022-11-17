@@ -25,6 +25,8 @@ private slots:
 
     void on_ExportExcel_clicked();
 
+    void on_ImportExcel_clicked();
+
 private:
     Ui::Aff *ui;
     Employee E;

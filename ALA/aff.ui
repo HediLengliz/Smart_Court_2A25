@@ -21,9 +21,9 @@ background:url(C:/Users/ALA/Desktop/2A/projet/hammerrrm.jpg);
   <widget class="QFrame" name="add_employee">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>480</x>
      <y>60</y>
-     <width>501</width>
+     <width>481</width>
      <height>531</height>
     </rect>
    </property>
@@ -62,9 +62,9 @@ background:url(C:/Users/ALA/Desktop/2A/projet/hammerrrm.jpg);
    <widget class="QPushButton" name="add_new_employee">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>130</x>
       <y>460</y>
-      <width>201</width>
+      <width>221</width>
       <height>51</height>
      </rect>
     </property>
@@ -96,9 +96,9 @@ border: 2px solid #bfbeba;
    <widget class="QTableView" name="TabAff">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>30</y>
-      <width>441</width>
+      <width>461</width>
       <height>411</height>
      </rect>
     </property>
@@ -135,40 +135,6 @@ border : 1px solid red;
     <attribute name="horizontalHeaderDefaultSectionSize">
      <number>106</number>
     </attribute>
-   </widget>
-   <widget class="QPushButton" name="ExportExcel">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>460</y>
-      <width>201</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-color:white;
-border-radius: 15px;
-background:#303030;
-border: 2px solid #bfbeba;
-}
-
-*:hover
-{
-	color:#303030;
-	border-radius:15px;
-	background:white;
-border: 2px solid #bfbeba;
-}</string>
-    </property>
-    <property name="text">
-     <string>EXPORT EXCEL</string>
-    </property>
    </widget>
   </widget>
  </widget>

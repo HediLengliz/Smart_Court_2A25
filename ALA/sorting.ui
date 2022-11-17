@@ -21,10 +21,10 @@
   <widget class="QFrame" name="add_employee">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>40</y>
+     <x>20</x>
+     <y>20</y>
      <width>501</width>
-     <height>531</height>
+     <height>611</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -158,47 +158,6 @@ border : 1px solid red;
      <string>MIN</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="MIN">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>410</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="acceptDrops">
-     <bool>true</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">*{
-background:transparent;
-border:none;
-color:white;
-border-bottom:1px solid #717072;
-}</string>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="maxLength">
-     <number>32767</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="placeholderText">
-     <string>123456</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
@@ -328,6 +287,121 @@ border: 2px solid #bfbeba;
     </property>
     <property name="text">
      <string>SORT ALL THE EMPLOYEES</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ExportExcel">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>530</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>EXPORT EXCEL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ImportExcel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>530</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+background:#303030;
+border: 2px solid #bfbeba;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white;
+border: 2px solid #bfbeba;
+}</string>
+    </property>
+    <property name="text">
+     <string>INPORT EXCEL</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MIN">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>410</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>123456</string>
     </property>
    </widget>
   </widget>

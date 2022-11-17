@@ -9,6 +9,7 @@
 #include "sorting.h"
 #include "searchpdf.h"
 #include "verifcin.h"
+#include "task.h"
 
 namespace Ui {
 class MainWindow;
@@ -47,6 +48,7 @@ private:
     Sorting *sorting;
     searchpdf *Searchpdf;
     verifcin *Verifcin;
+    Task* task;
 };
 
 #endif // MAINWINDOW_H

@@ -14,18 +14,18 @@
 #include <QPainter>
 #include <QTextDocument>
 
-struct statistic_obj
+typedef struct
 {
     int succ,fail,somme;
     float pourc;
-};
+}statistic_obj;
 
 
 class Employee
 {
     public:
         Employee();
-        Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city);
+        Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city,int NOMBRESCEANCE);
         Employee(int cin,QString email);
         int getcin();
         int getcodepin();
@@ -48,16 +48,17 @@ class Employee
         bool supprimer(int CIN);
         bool modifier(QSqlQueryModel* model);
         void afficheremail(QSqlQueryModel* model );
-        QSqlQueryModel* sorting(int min,int max);
-        QSqlQueryModel* sortingall();
+        QSqlQueryModel* sorting(int min,int max,int* n);
+        QSqlQueryModel* sortingall(int* n);
         void ERROR();
         QSqlQueryModel* search(int state,int cin,QString email);
         QString currDate();
         void pdf();
         bool verifcin(int cin);
+        bool isempty();
 
     private:
-        int CIN,Code_Pin;
+        int CIN,Code_Pin,ns,Abs;
         float Salary;
         QString Nom,Prenom,E_mail,City;
         statistic_obj S_Obj;

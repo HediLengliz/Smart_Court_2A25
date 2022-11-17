@@ -9,6 +9,8 @@
 #include <QtDebug>
 #include <QVariant>
 #include <QFileDialog>
+#include <QSqlQueryModel>
+
 
 class EEO_Field
 {
@@ -52,6 +54,7 @@ private:
     QString sheetName;
     QTableView *tableView;
     QList<EEO_Field *> fieldList;
+
 };
 
 #endif // EXPORTEXCELOBJECT_H
