@@ -1,4 +1,5 @@
-QT       += core gui sql
+QT       += core gui sql network  charts printsupport widgets axcontainer
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,29 +21,39 @@ SOURCES += \
     connection.cpp \
     dell.cpp \
     display.cpp \
-    mail.cpp \
+    email.cpp \
+    his.cpp \
     main.cpp \
     mainwindow.cpp \
     modify.cpp \
-    room.cpp
+    notif.cpp \
+    room.cpp \
+    smtp.cpp \
+    statis.cpp
 
 HEADERS += \
     add.h \
     connection.h \
     dell.h \
     display.h \
-    mail.h \
+    email.h \
+    his.h \
     mainwindow.h \
     modify.h \
-    room.h
+    notif.h \
+    room.h \
+    smtp.h \
+    statis.h
 
 FORMS += \
     add.ui \
     dell.ui \
     display.ui \
-    mail.ui \
+    email.ui \
+    his.ui \
     mainwindow.ui \
-    modify.ui
+    modify.ui \
+    statis.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

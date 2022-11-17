@@ -4,6 +4,8 @@
 #include "dell.h"
 #include "display.h"
 #include "modify.h"
+#include "his.h"
+#include "notif.h"
 //#include "mail.h"
 #include <QDataStream>
 #include <QSortFilterProxyModel>
@@ -19,6 +21,9 @@
 #include <QTextStream>
 #include <QFile>
 #include <QDataStream>
+#include "smtp.h"
+#include "email.h"
+#include "statis.h"
 namespace Ui {
 class MainWindow;
 }
@@ -45,12 +50,21 @@ private slots:
 
         void on_EMAIL_clicked();
 
+        void on_DISPLAY_PUSH_2_clicked();
+
+
+
+        void on_STAT_clicked();
+
 private:
     Ui::MainWindow *ui;
     add* Add;
     dell* Dell;
     Modify* mod;
     display* Display;
+    his* His;
+    email *Email;
+    Statis *statis;
 
 };
 

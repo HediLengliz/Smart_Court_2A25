@@ -1,6 +1,6 @@
-/*#include "mail.h"
+#include "smtp.h"
 
-mail::mail( const QString &user, const QString &pass, const QString &host, int port, int timeout )
+Smtp::Smtp( const QString &user, const QString &pass, const QString &host, int port, int timeout )
 {
     socket = new QSslSocket(this);
 
@@ -21,62 +21,21 @@ mail::mail( const QString &user, const QString &pass, const QString &host, int p
 
 }
 
-void mail::sendMail(const QString &from, const QString &to, const QString &subject, const QString &body, QStringList files)
+void Smtp::sendMail(const QString &from, const QString &to, const QString &subject, const QString &body)
 {
     message = "To: " + to + "\n";
     message.append("From: " + from + "\n");
     message.append("Subject: " + subject + "\n");
-
-    //Let's intitiate multipart MIME with cutting boundary "frontier"
-    message.append("MIME-Version: 1.0\n");
-    message.append("Content-Type: multipart/mixed; boundary=frontier\n\n");
-
-
-
-    message.append( "--frontier\n" );
-    //message.append( "Content-Type: text/html\n\n" );  //Uncomment this for HTML formating, coment the line below
-    message.append( "Content-Type: text/plain\n\n" );
     message.append(body);
-    message.append("\n\n");
-
-    if(!files.isEmpty())
-    {
-        qDebug() << "Files to be sent: " << files.size();
-        foreach(QString filePath, files)
-        {
-            QFile file(filePath);
-            if(file.exists())
-            {
-                if (!file.open(QIODevice::ReadOnly))
-                {
-                    qDebug("Couldn't open the file");
-                    QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Couldn't open the file\n\n" )  );
-                        return ;
-                }
-                QByteArray bytes = file.readAll();
-                message.append( "--frontier\n" );
-                message.append( "Content-Type: application/octet-stream\nContent-Disposition: attachment; filename="+ QFileInfo(file.fileName()).fileName() +";\nContent-Transfer-Encoding: base64\n\n" );
-                message.append(bytes.toBase64());
-                message.append("\n");
-            }
-        }
-    }
-    else
-        qDebug() << "No attachments found";
-
-
-    message.append( "--frontier--\n" );
-
     message.replace( QString::fromLatin1( "\n" ), QString::fromLatin1( "\r\n" ) );
-    message.replace( QString::fromLatin1( "\r\n.\r\n" ),QString::fromLatin1( "\r\n..\r\n" ) );
-
-
+    message.replace( QString::fromLatin1( "\r\n.\r\n" ),
+    QString::fromLatin1( "\r\n..\r\n" ) );
     this->from = from;
     rcpt = to;
     state = Init;
-    socket->connectToHostEncrypted("mail.gmail.com",465); //"smtp.gmail.com" and 465 for gmail TLS
+    socket->connectToHostEncrypted(host, port);
     if (!socket->waitForConnected(timeout)) {
-         qDebug()<< "send_mail " << socket->errorString();
+         qDebug() << socket->errorString();
      }
 
     t = new QTextStream( socket );
@@ -85,35 +44,35 @@ void mail::sendMail(const QString &from, const QString &to, const QString &subje
 
 }
 
-mail::~mail()
+Smtp::~Smtp()
 {
     delete t;
     delete socket;
 }
-void mail::stateChanged(QAbstractSocket::SocketState socketState)
+void Smtp::stateChanged(QAbstractSocket::SocketState socketState)
 {
 
     qDebug() <<"stateChanged " << socketState;
 }
 
-void mail::errorReceived(QAbstractSocket::SocketError socketError)
+void Smtp::errorReceived(QAbstractSocket::SocketError socketError)
 {
     qDebug() << "error " <<socketError;
 }
 
-void mail::disconnected()
+void Smtp::disconnected()
 {
 
     qDebug() <<"disconneted";
     qDebug() << "error "  << socket->errorString();
 }
 
-void mail::connected()
+void Smtp::connected()
 {
     qDebug() << "Connected ";
 }
 
-void mail::readyRead()
+void Smtp::readyRead()
 {
 
      qDebug() <<"readyRead";
@@ -141,14 +100,14 @@ void mail::readyRead()
         state = HandShake;
     }
     //No need, because I'm using socket->startClienEncryption() which makes the SSL handshake for you
-    else if (state == Tls && responseLine == "250")
+    /*else if (state == Tls && responseLine == "250")
     {
         // Trying AUTH
         qDebug() << "STarting Tls";
         *t << "STARTTLS" << "\r\n";
         t->flush();
         state = HandShake;
-    }
+    }*/
     else if (state == HandShake && responseLine == "250")
     {
         socket->startClientEncryption();
@@ -230,7 +189,7 @@ void mail::readyRead()
         *t << "QUIT\r\n";
         t->flush();
         // here, we just close.
-        //state = Close;
+        state = Close;
         emit status( tr( "Message sent" ) );
     }
     else if ( state == Close )
@@ -241,10 +200,9 @@ void mail::readyRead()
     else
     {
         // something broke.
-     //   QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Unexpected reply from SMTP server:\n\n" ) + response );
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Unexpected reply from SMTP server:\n\n" ) + response );
         state = Close;
         emit status( tr( "Failed to send message" ) );
     }
     response = "";
 }
-*/

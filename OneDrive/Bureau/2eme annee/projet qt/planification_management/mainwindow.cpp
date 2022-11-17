@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "connection.h"
+#include "his.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -44,51 +45,28 @@ void MainWindow::on_MOD_PUSH_clicked()
 
 
 }
-//void  MainWindow::browse()
-//{
-//    files.clear();
-
-//    QFileDialog dialog(this);
-//    dialog.setDirectory(QDir::homePath());
-//    dialog.setFileMode(QFileDialog::ExistingFiles);
-
-//    if (dialog.exec())
-//        files = dialog.selectedFiles();
-
-//    QString fileListString;
-//    foreach(QString file, files)
-//        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
-
-//    ui->file->setText( fileListString );
-
-//}
-//void   MainWindow::sendMail()
-//{
-//    mail* smtp = new mail("mohamedhedi.lengliz@esprit.tn",ui->mail_pass->text(), "mail.gmail.com");
-//    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
-
-//    if( !files.isEmpty() )
-//        smtp->sendMail("mohamedhedi.lengliz@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
-//    else
-//        smtp->sendMail("mohamedhedi.lengliz@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
-//}
-//void   MainWindow::mailSent(QString status)
-//{
-
-//    if(status == "Message sent")
-//        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
-//    ui->rcpt->clear();
-//    ui->subject->clear();
-//    ui->file->clear();
-//    ui->msg->clear();
-//    ui->mail_pass->clear();
-//}
-//connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
-//connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
 
 
-//void MainWindow::on_EMAIL_clicked()
-//{
-//    Mail=new mail(this);
-//    Mail->show();
-//}
+void MainWindow::on_DISPLAY_PUSH_2_clicked()
+{
+    His=new his(this);
+    His->show();
+    his m;
+    m.readfile();
+
+}
+
+void MainWindow::on_EMAIL_clicked()
+{
+    Email=new email(this);
+    Email->show();
+}
+
+
+
+
+void MainWindow::on_STAT_clicked()
+{
+   statis=new Statis(this);
+   statis->show();
+}

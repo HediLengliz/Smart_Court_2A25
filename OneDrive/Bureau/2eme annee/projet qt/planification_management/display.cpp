@@ -1,5 +1,6 @@
 #include "display.h"
 #include "ui_display.h"
+#include "notif.h"
 #include <QMessageBox>
 #include <QPlainTextEdit>
 #include <QTextStream>
@@ -20,18 +21,21 @@
 #include <QCoreApplication>
 #include <QTextStream>
 #include <QSqlQuery>
+#include <QDateTime>
 
 display::display(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::display)
 {
     ui->setupUi(this);
+    ui->tableView->setModel(r.displayroom());
+
 
 }
 
 display::~display()
 {
-ui->tableView->setModel(r.displayroom());    delete ui;
+delete ui;
 }
 
 
@@ -40,6 +44,7 @@ void display::on_pushButton_clicked()
     room rs;
     QVariant id_ff = ui->tableView->model()->data(ui->tableView->selectionModel()->currentIndex(),Qt::DisplayRole);
     int idd = id_ff.toInt();
+    QString id_ffs = id_ff.toString();
     QMessageBox::StandardButton reply;
       reply = QMessageBox::question(this, "DELETE", "Are you Sure you want to DELETE this ROOM?",
                                     QMessageBox::Yes|QMessageBox::No);
@@ -47,6 +52,19 @@ void display::on_pushButton_clicked()
           bool test=rs.deleteroom(idd);
           if(test)
           {
+
+              notif m("Room","Room deleted !");
+              m.afficher();
+
+              foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
+                                         le->clear();}
+                                    QFile file("C:/Users/hedi2/OneDrive/Bureau/2eme annee/projet qt/planification_management/logs/historiques.txt");
+                                    if(!file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
+                                        return;
+                                    QTextStream cout(&file);
+                                    QString d_info = QDateTime::currentDateTime().toString();
+                                    QString message2=" - "+d_info+" A Room has been deleted by ID : "+id_ffs+"\n";
+                                    cout << message2;
               ui->tableView->setModel(r.displayroom());
 
           }
@@ -71,7 +89,7 @@ void display::on_PDF_clicked()
               painter.setPen(Qt::darkCyan);
               painter.setFont(QFont("Time New Roman", 25));
               painter.drawText(3000,1400,"ROOMS LIST");
-              painter.setPen(Qt::cyan);
+              painter.setPen(Qt::black);
               painter.setFont(QFont("Time New Roman", 15));
               painter.drawRect(100,100,9400,2500);
               painter.drawRect(100,3000,9400,500);

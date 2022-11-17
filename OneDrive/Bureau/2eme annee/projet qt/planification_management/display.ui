@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1368</width>
-    <height>768</height>
+    <height>899</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,10 +21,10 @@ background:url(C:/Users/hedi2/downloads/hamer.jpg)
   <widget class="QFrame" name="Display">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>50</y>
+     <x>60</x>
+     <y>160</y>
      <width>941</width>
-     <height>611</height>
+     <height>731</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -43,10 +43,10 @@ background:url(C:/Users/hedi2/downloads/hamer.jpg)
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>941</width>
-      <height>611</height>
+      <x>10</x>
+      <y>10</y>
+      <width>821</width>
+      <height>591</height>
      </rect>
     </property>
    </widget>
@@ -54,7 +54,7 @@ background:url(C:/Users/hedi2/downloads/hamer.jpg)
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>460</y>
+      <y>650</y>
       <width>551</width>
       <height>41</height>
      </rect>
@@ -107,8 +107,8 @@ padding:0 8;
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>460</y>
+      <x>710</x>
+      <y>640</y>
       <width>171</width>
       <height>41</height>
      </rect>
@@ -165,8 +165,8 @@ background:51556e;
    <widget class="QPushButton" name="PDF">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>390</y>
+      <x>710</x>
+      <y>560</y>
       <width>171</width>
       <height>41</height>
      </rect>

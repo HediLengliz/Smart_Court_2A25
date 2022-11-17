@@ -335,6 +335,92 @@ background:white
       </size>
      </property>
     </widget>
+    <widget class="QPushButton" name="DISPLAY_PUSH_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>360</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:white
+;
+}
+
+*:hover
+{
+	color:white;
+	border-radius:15px;
+	background:#303030;
+}</string>
+     </property>
+     <property name="text">
+      <string>History</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../../../Downloads/history.png</normaloff>../../../../../Downloads/history.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="STAT">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>360</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+color:black;
+border-radius: 15px;
+background:white
+;
+}
+
+*:hover
+{
+	color:white;
+	border-radius:15px;
+	background:#303030;
+}</string>
+     </property>
+     <property name="text">
+      <string>Statiscs</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../../../Downloads/pie-chart.png</normaloff>../../../../../Downloads/pie-chart.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_15">
     <property name="geometry">
