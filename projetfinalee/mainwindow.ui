@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1369</width>
+    <height>845</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background:url(C:/Users/ALA/Desktop/2A/projet/azzz.png) ;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>480</y>
+      <width>381</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Management Of Legal Affairs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>30</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Sign out</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_14">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>750</y>
+      <width>421</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:white;
+color:white;
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Management Of Audience Planification</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>30</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>600</y>
+      <width>381</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Management Of Lawyers and Judges Services</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>381</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Management Of Human Resources</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>30</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Sign Up</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_15">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>750</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Send</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>710</y>
+      <width>381</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}
+
+*:hover
+{
+	color:#333333;
+	border-radius:25px;
+	background:white
+}
+
+*:pressed{
+border-color: bluedark;
+border-radius: 25px;
+background:#333333;
+color:white;
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Management Of Audience Planification</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

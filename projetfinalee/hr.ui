@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HR</class>
+ <widget class="QDialog" name="HR">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background:url(C:/Users/ALA/Desktop/2A/projet/court-hammerrr.jpg) ;
+}</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_15">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>20</y>
+     <width>211</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+background:#51556e;
+border: 2px solid #bfbeba;
+border-radius: 35px;
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/icons/2636184.png</normaloff>:/new/prefix1/icons/2636184.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>70</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Qframe">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>100</y>
+     <width>731</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame
+{
+	background:#51556e;
+border: 2px solid #bfbeba;
+    border-radius:15px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>40</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+    font-family:century gothic;border:none;
+    font-size:24px;
+	color:#bfbeba;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>HUMAN RESOURCES</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>450</y>
+      <width>231</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>D:/QTprojet/smart court.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_16">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>290</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>SEND</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>300</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+background:transparent;
+border:none;
+color:white;
+border-bottom:1px solid #717072;
+}</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
+    </property>
+    <property name="placeholderText">
+     <string>Report</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ADD_PUSH">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>120</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border: 2px solid #bfbeba;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>    ADD an employee</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/new/prefix1/icons/add.png</normaloff>:/new/prefix1/icons/add.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>29</width>
+      <height>29</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DEL_PUSH">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>  Delete an employee</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/new/prefix1/icons/delete.png</normaloff>:/new/prefix1/icons/delete.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>29</width>
+      <height>29</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LIST_PUSH">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>120</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>    List of employees</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/new/prefix1/icons/list.png</normaloff>:/new/prefix1/icons/list.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>29</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="MOD_PUSH">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>200</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>   Modify of employees</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/new/prefix1/icons/edit.png</normaloff>:/new/prefix1/icons/edit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>29</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SORT_PUSH">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>  Sorting By Salary</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/new/prefix1/icons/sort.png</normaloff>:/new/prefix1/icons/sort.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>37</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SEARCH_PUSH">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>200</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border: 2px solid #bfbeba;
+border-radius: 15px;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>SEARCH For Employee</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/new/prefix1/icons/loupe.png</normaloff>:/new/prefix1/icons/loupe.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>29</width>
+      <height>29</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TODOLIST">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>290</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+color:white;
+border-radius: 15px;
+border: 2px solid #bfbeba;
+background:#303030;
+}
+
+*:hover
+{
+	color:#303030;
+	border-radius:15px;
+	background:white
+}</string>
+    </property>
+    <property name="text">
+     <string>     To-Do-List</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/new/prefix1/icons/list.png</normaloff>:/new/prefix1/icons/list.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>29</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <zorder>Qframe</zorder>
+  <zorder>pushButton_15</zorder>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
