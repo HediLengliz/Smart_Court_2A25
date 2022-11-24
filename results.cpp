@@ -24,7 +24,7 @@ void results::on_UPLOAD_clicked()
     //QSqlQueryModel *verif=A.recherche(id);
                 /* if (verif!=nullptr)
                  {*/
-    QFile file("C:/Users/MAHOX/OneDrive/Desktop/Qt Projet/Accuse/Results.txt");
+  QFile file("D:/Accuse/Results.txt");
         file.open(QIODevice::Append | QIODevice::Text);
         QTextStream out(&file);
         out << "ID:  "<<id<<"         Result Of session:  "<<RS<<endl;
@@ -39,6 +39,7 @@ void results::on_UPLOAD_clicked()
                  { QMessageBox::information(this, QObject::tr("Accusé Introuvable!"),
                    QObject::tr("Accusé Introuvable!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
                  }*/
+   }
 
 
-}
+

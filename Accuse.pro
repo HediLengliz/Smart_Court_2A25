@@ -1,6 +1,7 @@
 QT       += core gui
 QT += sql charts printsupport widgets axcontainer
 QT += gui
+QT += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,6 +20,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     accuse.cpp \
+    arduino.cpp \
     connection.cpp \
     consult.cpp \
     delete.cpp \
@@ -35,6 +37,7 @@ SOURCES += \
 
 HEADERS += \
     accuse.h \
+    arduino.h \
     connection.h \
     consult.h \
     delete.h \
@@ -49,6 +52,7 @@ HEADERS += \
     tri.h
 
 FORMS += \
+    arduino.ui \
     consult.ui \
     delete.ui \
     dialog.ui \

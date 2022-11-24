@@ -98,7 +98,7 @@ void MainWindow::on_Sort_clicked()
 
 void MainWindow::on_PDF_clicked()
 {
-    QPdfWriter pdf("C:/Users/MAHOX/OneDrive/Desktop/Qt Projet/Accuse/Accuse.pdf");
+    QPdfWriter pdf("D:/Accuse/Accuse.pdf");
 
    QPainter painter(&pdf);
    int i = 4000;
@@ -137,7 +137,7 @@ void MainWindow::on_PDF_clicked()
              i = i + 350;
           }
           QMessageBox::information(this, QObject::tr("PDF Enregistré!"),
-          QObject::tr("PDF Enregistré!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
+          QObject::tr("Saved PDF!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
 
 }
 
