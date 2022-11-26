@@ -25,16 +25,18 @@ class Employee
 {
     public:
         Employee();
-        Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city,int NOMBRESCEANCE);
+        Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city,int NOMBRESCEANCE,QString role,int code);
         Employee(int cin,QString email);
         int getcin();
         int getcodepin();
+        int getcode();
         float getsalary();
         QString getnom();
         QString getprenom();
         QString getemail();
         QString getcity();
         statistic_obj getstatisticobj();
+        void setcode(int code);
         void setcin(int cin);
         void setcodepin(int cp);
         void setsalary(float s);
@@ -58,9 +60,9 @@ class Employee
         bool isempty();
 
     private:
-        int CIN,Code_Pin,ns,Abs;
+        int CIN,Code_Pin,ns,Abs,Code;
         float Salary;
-        QString Nom,Prenom,E_mail,City;
+        QString Nom,Prenom,E_mail,City,Role;
         statistic_obj S_Obj;
 };
 

@@ -20,7 +20,7 @@ Employee::Employee()
     ns = 0;
 }
 
-Employee::Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city,int NOMBRESCEANCE)
+Employee::Employee(int cin,int codepin,float salary,QString nom,QString prenom,QString email,QString city,int NOMBRESCEANCE,QString role,int code)
 {
     CIN = cin;
     Code_Pin = codepin;
@@ -35,6 +35,8 @@ Employee::Employee(int cin,int codepin,float salary,QString nom,QString prenom,Q
     S_Obj.pourc = -1;
     ns = NOMBRESCEANCE;
     Abs = 0;
+    Role = role;
+    Code = code;
 };
 
 Employee::Employee(int cin,QString email)
@@ -84,12 +86,22 @@ statistic_obj Employee::getstatisticobj()
     return S_Obj;
 };
 
+int Employee::getcode()
+{
+    return Code;
+}
+
 ////////////////////////////////////////////////////////////SET FUNCTIONS////////////////////////////////////////////////////////////
 
 void Employee::setcin(int cin)
 {
     CIN = cin;
 };
+
+void Employee::setcode(int code)
+{
+    Code = code;
+}
 
 void Employee::setcodepin(int cp)
 {
@@ -141,8 +153,9 @@ bool Employee::ajouter()
     QString objfail_string = QString::number(S_Obj.fail);
     QString objsom_string = QString::number(S_Obj.somme);
     QString objpourc_string = QString::number(S_Obj.pourc);
+    QString code_string = QString::number(Code);
     QString objns = QString::number(ns);
-    query.prepare("INSERT INTO EMPLOYEE (CIN, CODE_PIN, SALARY, NOM, PRENOM, E_MAIL, CITY, NOMBRESCEANCE, ABSENCE)"  "VALUES (:CIN ,:Code_Pin ,:Salary, :Nom , :Prenom, :E_mail , :City, :NOMBRESCEANCE, :ABSENCE)");
+    query.prepare("INSERT INTO EMPLOYEE (CIN, CODE_PIN, SALARY, NOM, PRENOM, E_MAIL, CITY, NOMBRESCEANCE, ABSENCE, CODE, ROLE)"  "VALUES (:CIN ,:Code_Pin ,:Salary, :Nom , :Prenom, :E_mail , :City, :NOMBRESCEANCE, :ABSENCE, :CODE, :ROLE)");
     query.bindValue(":CIN",cin_string);
     query.bindValue(":Code_Pin",codepin_string);
     query.bindValue(":Salary",salary_string);
@@ -152,6 +165,8 @@ bool Employee::ajouter()
     query.bindValue(":City",City);
     query.bindValue(":NOMBRESCEANCE",ns);
     query.bindValue(":ABSENCE",Abs);
+    query.bindValue(":CODE",Code);
+    query.bindValue(":ROLE",Role);
     return query.exec();
 }
 
@@ -179,6 +194,9 @@ bool Employee::supprimer(int CIN)
              row_count++;
         if(row_count == 1)
         {
+            query.prepare("Delete from OBJECTIVE where CIN=:CIN");
+            query.bindValue(":CIN",CIN);
+            query.exec();
             query.prepare("Delete from EMPLOYEE where CIN=:CIN");
             query.bindValue(":CIN",CIN);
             return query.exec();

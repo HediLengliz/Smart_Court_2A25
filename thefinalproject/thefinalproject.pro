@@ -1,4 +1,4 @@
-QT       += core gui sql printsupport charts
+QT       += core gui sql printsupport charts serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,6 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
+    cihart.cpp \
     connection.cpp \
     employee.cpp \
     exportexcelobject.cpp \
@@ -24,6 +26,8 @@ SOURCES += \
     objective.cpp
 
 HEADERS += \
+    arduino.h \
+    cihart.h \
     connection.h \
     employee.h \
     exportexcelobject.h \
@@ -31,6 +35,7 @@ HEADERS += \
     objective.h
 
 FORMS += \
+    cihart.ui \
     mainwindow.ui
 
 # Default rules for deployment.

@@ -9,5 +9,7 @@
         <file>icons/loupe.png</file>
         <file>icons/sort.png</file>
         <file>icons/ToDoList.png</file>
+        <file>icons/logout.png</file>
+        <file>icons/online-meeting.png</file>
     </qresource>
 </RCC>
