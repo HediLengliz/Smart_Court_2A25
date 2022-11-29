@@ -14,7 +14,10 @@
 #include <QtCharts/QtCharts>
 #include <QTimer>
 #include <QPieSlice>
-
+#include "room.h"
+#include "notif.h"
+#include "his.h"
+#include "statis.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -31,6 +34,9 @@ public:
     Objective O;
     float fin,unfin,tod,doi;
     QString codee;
+    notif m;
+    his * His;
+    Statis *statis;
 
 private slots:
 
@@ -124,10 +130,60 @@ private slots:
 
     void on_DEL_PUSH_3_clicked();
 
+    void on_pushButton_13_clicked();
+
+    void on_ADD_19_clicked();
+
+    void on_DISPLAY_PUSH_clicked();
+
+    void on_PDF_5_clicked();
+
+
+
+    void on_radioButton_clicked();
+
+    void on_radioButton_2_clicked();
+
+    void on_radioButton_3_clicked();
+
+    void on_radioButton_4_clicked();
+
+    void on_radioButton_5_clicked();
+
+    void on_radioButton_6_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_LRN_4_textEdited(const QString &arg1);
+
+    void on_MOD_PUSH_3_clicked();
+
+    void on_MOD_2_clicked();
+
+    void on_DISPLAY_PUSH_2_clicked();
+
+    void on_STAT_clicked();
+
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_ADD_PUSH_3_clicked();
+
+    void on_DEL_PUSH_6_clicked();
+
+    void on_DEL_PUSH_5_clicked();
+
 private:
     Ui::MainWindow *ui;
     Cihart *cihart;
     QByteArray data;
     Arduino A;
+    room r;
+
+
 };
 #endif // MAINWINDOW_H

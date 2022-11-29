@@ -11,5 +11,17 @@
         <file>icons/ToDoList.png</file>
         <file>icons/logout.png</file>
         <file>icons/online-meeting.png</file>
+        <file>icons/listR.png</file>
+        <file>icons/x-mark.png</file>
+        <file>icons/pdf.png</file>
+        <file>icons/plus.png</file>
+        <file>icons/power-off.png</file>
+        <file>icons/court.png</file>
+        <file>icons/editing.png</file>
+        <file>icons/fullscreen.png</file>
+        <file>icons/minimize (1).png</file>
+        <file>icons/notification.png</file>
+        <file>icons/history.png</file>
+        <file>icons/pie-chart.png</file>
     </qresource>
 </RCC>

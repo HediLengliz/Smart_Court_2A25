@@ -21,9 +21,13 @@ SOURCES += \
     connection.cpp \
     employee.cpp \
     exportexcelobject.cpp \
+    his.cpp \
     main.cpp \
     mainwindow.cpp \
-    objective.cpp
+    notif.cpp \
+    objective.cpp \
+    room.cpp \
+    statis.cpp
 
 HEADERS += \
     arduino.h \
@@ -31,12 +35,18 @@ HEADERS += \
     connection.h \
     employee.h \
     exportexcelobject.h \
+    his.h \
     mainwindow.h \
-    objective.h
+    notif.h \
+    objective.h \
+    room.h \
+    statis.h
 
 FORMS += \
     cihart.ui \
-    mainwindow.ui
+    his.ui \
+    mainwindow.ui \
+    statis.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -45,3 +55,19 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     icons.qrc
+
+DISTFILES += \
+    icons/checked.png \
+    icons/court.png \
+    icons/editing.png \
+    icons/fullscreen.png \
+    icons/history.png \
+    icons/listR.png \
+    icons/minimize (1).png \
+    icons/minimize (1).png \
+    icons/pdf.png \
+    icons/pie-chart.png \
+    icons/plus.png \
+    icons/plus.png \
+    icons/x-mark.png \
+    icons/x-mark.png

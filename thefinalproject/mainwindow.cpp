@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -770,4 +769,281 @@ void MainWindow::update_code()
             ui->LCodee->setText(s);
         }
     }
+}
+
+void MainWindow::on_pushButton_13_clicked()
+{
+    ui->tabWidget->setCurrentIndex(9);
+}
+
+void MainWindow::on_ADD_19_clicked()
+{
+    int ID_ROOM = ui->LRI->text().toInt();
+    QString ID_ROOMs = ui->LRI->text();
+        QString pincode = ui->LCP->text();
+        QString number = ui->LRN->text();
+        QString room_type = ui->LRT->text();
+        QString creation_date = ui->dateEdit->date().toString();
+        QString room_state = ui->LRS->text();
+        room r(ID_ROOM,pincode,number,room_type,creation_date,room_state);
+        //cout<<r.getpincode().toInt()<<endl;
+
+        if (r.addroom())
+        {
+            QMessageBox::information(nullptr, QObject::tr("SUCCESS"),
+                        QObject::tr("The room has been added successfully.\n"
+                                    "Click OK to exit"), QMessageBox::Ok);
+            notif m("Room","Room Added !");
+            m.afficher();
+
+
+            foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
+                                       le->clear();}
+                                  QFile file("C:/thefinalproject/logs/historiques.txt");
+                                  if(!file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
+                                      return;
+                                  QTextStream cout(&file);
+                                  QString d_info = QDateTime::currentDateTime().toString();
+                                  QString message2=" + "+d_info+" A Room has been added by ID : "+ID_ROOMs+"\n";
+                                  cout << message2;
+
+        }
+        else
+            QMessageBox::critical(nullptr, QObject::tr("Failed"),
+                        QObject::tr("The room couldn't be added."
+                                    "Click Cancel to verify."), QMessageBox::Cancel);
+}
+
+void MainWindow::on_DISPLAY_PUSH_clicked()
+{   ui->tableView->setModel(r.displayroom());
+    ui->tabWidget->setCurrentIndex(11);
+
+
+}
+
+
+void MainWindow::on_PDF_5_clicked()
+   {
+        QPdfWriter pdf("C:/thefinalproject/room.pdf");
+
+           QPainter painter(&pdf);
+           int i = 4000;
+                  painter.setPen(Qt::darkCyan);
+                  painter.setFont(QFont("Time New Roman", 25));
+                  painter.drawText(3000,1400,"ROOMS LIST");
+                  painter.setPen(Qt::black);
+                  painter.setFont(QFont("Time New Roman", 15));
+                  painter.drawRect(100,100,9400,2500);
+                  painter.drawRect(100,3000,9400,500);
+                  painter.setFont(QFont("Time New Roman", 9));
+                  painter.drawText(400,3300,"ID ROOM");
+                  painter.drawText(1350,3300,"PINCODE");
+                  painter.drawText(2200,3300,"ROOM NUMBER");
+                  painter.drawText(3400,3300,"ROOM TYPE");
+                  painter.drawText(4400,3300,"CREATION DATE");
+                  painter.drawText(6200,3300,"ROOM STATE");
+                  painter.drawRect(100,3000,9400,9000);
+
+                  QSqlQuery query;
+                  query.prepare("select * from ROOMS");
+                  query.exec();
+                  while (query.next())
+                  {
+                      painter.drawText(400,i,query.value(0).toString());
+                      painter.drawText(1350,i,query.value(1).toString());
+                      painter.drawText(2300,i,query.value(2).toString());
+                      painter.drawText(3400,i,query.value(3).toString());
+                      painter.drawText(4400,i,query.value(4).toString());
+                      painter.drawText(6200,i,query.value(5).toString());
+
+
+
+
+                     i = i + 350;
+                  }
+                  QMessageBox::information(this, QObject::tr("PDF Saved Successfuly!"),
+                  QObject::tr("PDF Saved Successfuly!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+
+
+
+void MainWindow::on_radioButton_clicked()
+{
+    room r;
+    ui->tableView->setModel(r.triID());
+}
+
+void MainWindow::on_radioButton_2_clicked()
+{
+    room r;
+    ui->tableView->setModel(r.triPIN());
+}
+
+void MainWindow::on_radioButton_3_clicked()
+{
+    room r;
+    ui->tableView->setModel(r.triNUM());
+}
+
+void MainWindow::on_radioButton_4_clicked()
+{
+    room r;
+    ui->tableView->setModel(r.triTYPE());
+}
+
+void MainWindow::on_radioButton_5_clicked()
+{
+    room r;
+    ui->tableView->setModel(r.triDATE());
+}
+
+
+void MainWindow::on_radioButton_6_clicked()
+{
+    room r;
+    ui->tableView->setModel(r.triSTATE());
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    room rs;
+    QVariant id_ff = ui->tableView->model()->data(ui->tableView->selectionModel()->currentIndex(),Qt::DisplayRole);
+    int idd = id_ff.toInt();
+    QString id_ffs = id_ff.toString();
+    QMessageBox::StandardButton reply;
+      reply = QMessageBox::question(this, "DELETE", "Are you Sure you want to DELETE this ROOM?",
+                                    QMessageBox::Yes|QMessageBox::No);
+      if (reply == QMessageBox::Yes) {
+          bool test=rs.deleteroom(idd);
+          if(test)
+          {
+
+              notif m("Room","Room deleted !");
+              m.afficher();
+
+              foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
+                                         le->clear();}
+                                    QFile file("C:/thefinalproject/logs/historiques.txt");
+                                    if(!file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
+                                        return;
+                                    QTextStream cout(&file);
+                                    QString d_info = QDateTime::currentDateTime().toString();
+                                    QString message2=" - "+d_info+" A Room has been deleted by ID : "+id_ffs+"\n";
+                                    cout << message2;
+              ui->tableView->setModel(r.displayroom());
+
+          }
+      }
+}
+
+
+void MainWindow::on_LRN_4_textEdited(const QString &arg1)
+{
+    room a;
+    ui->tableView->setModel(a.SEARCH(arg1));
+}
+
+void MainWindow::on_MOD_PUSH_3_clicked()
+{
+    ui->tabWidget->setCurrentIndex(12);
+    QSqlQueryModel* model = new QSqlQueryModel();
+    model->setQuery("SELECT ID_ROOM FROM ROOMS");
+    ui->comboRoom->setModel(model);
+}
+
+void MainWindow::on_MOD_2_clicked()
+{
+
+    room rs;
+   ui->comboRoom->clear();
+   ui->comboRoom->addItems(rs.search_id());
+
+    int ID_ROOM = ui->comboRoom->currentText().toInt();
+    QString ID_ROOMss = ui->comboRoom->currentText();
+    QString pincodee = ui->LCP_m->text();
+    QString number = ui->LRN_m->text();
+    QString room_type = ui->LRT_m->text();
+   QString creation_date = ui->dateEdit_m->date().toString();
+    QString room_state = ui->LRS_m->text();
+    room r;
+         bool test=r.modifyroom(ID_ROOM,pincodee,number,room_type,creation_date,room_state);
+//         cout<<"khedmet"<<endl;
+         //cout<<number.toInt()<<endl;
+          if(test)
+          {
+              QMessageBox::information(nullptr, QObject::tr("SUCCESS"),
+                          QObject::tr("The room has been Updated successfully!.\n"
+                                      "Click OK to exit"), QMessageBox::Ok);
+              notif m("Room","Room modified !");
+              m.afficher();
+
+              foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
+                                         le->clear();}
+                                    QFile file("C:/thefinalproject/logs/historiques.txt");
+                                    if(!file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
+                                        return;
+                                    QTextStream cout(&file);
+                                    QString d_info = QDateTime::currentDateTime().toString();
+                                    QString message2=" ~ "+d_info+" A Room has been modified by ID : "+ID_ROOMss+"\n";
+                                    cout << message2;
+              ui->tabWidget->setCurrentIndex(9);
+          }
+          else
+              QMessageBox::critical(nullptr, QObject::tr("Failed"),
+                          QObject::tr("The room couldn't be Updated!."
+                                      "Click Cancel to verify."), QMessageBox::Cancel);
+
+}
+
+void MainWindow::on_DISPLAY_PUSH_2_clicked()
+{
+    His=new his(this);
+    His->show();
+    his m;
+    m.readfile();
+}
+
+void MainWindow::on_STAT_clicked()
+{
+    statis=new Statis(this);
+    statis->show();
+    //ui->tabWidget->setCurrentIndex(9);
+}
+
+//void MainWindow::on_comboRoom_activated(const QString &arg1)
+//{
+//     room rs;
+//    ui->comboRoom->clear();
+//     ui->comboRoom->addItems(rs.search_id());
+//}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->tabWidget->setCurrentIndex(9);
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->tabWidget->setCurrentIndex(9);
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    ui->tabWidget->setCurrentIndex(9);
+}
+
+void MainWindow::on_ADD_PUSH_3_clicked()
+{
+   ui->tabWidget->setCurrentIndex(10);
+}
+
+void MainWindow::on_DEL_PUSH_6_clicked()
+{
+    QString link = "https://justiceleague.daily.co/9NK3LI2zsQSw0hc6KniN";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void MainWindow::on_DEL_PUSH_5_clicked()
+{
+    ui->tabWidget->setCurrentIndex(0);
 }
