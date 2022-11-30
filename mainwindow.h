@@ -12,6 +12,8 @@
 #include <results.h>
 #include <mail.h>
 #include <statistique.h>
+#include "arduino.h"
+#include "incendie.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,7 +28,7 @@ public:
     ~MainWindow();
 
 private slots:
-
+//QByteArray data;
 
     void on_ADD_ACC_clicked();
 
@@ -50,6 +52,8 @@ private slots:
 
     void on_Stats_clicked();
 
+    void on_incendie_clicked();
+
 private:
     Ui::MainWindow *ui;
     Dialog *d;
@@ -62,5 +66,7 @@ private:
     results *rs;
     Mail *ml;
     statistique *st;
+    arduino A1;
+
 };
 #endif // MAINWINDOW_H

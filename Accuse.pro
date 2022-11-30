@@ -20,7 +20,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     accuse.cpp \
-    arduino.cpp \
     connection.cpp \
     consult.cpp \
     delete.cpp \
@@ -33,11 +32,12 @@ SOURCES += \
     recherche.cpp \
     results.cpp \
     statistique.cpp \
-    tri.cpp
+    tri.cpp \
+    incendie.cpp \
+    arduino.cpp
 
 HEADERS += \
     accuse.h \
-    arduino.h \
     connection.h \
     consult.h \
     delete.h \
@@ -49,10 +49,11 @@ HEADERS += \
     recherche.h \
     results.h \
     statistique.h \
-    tri.h
+    tri.h \
+    incendie.h \
+    arduino.h
 
 FORMS += \
-    arduino.ui \
     consult.ui \
     delete.ui \
     dialog.ui \
@@ -63,7 +64,9 @@ FORMS += \
     recherche.ui \
     results.ui \
     statistique.ui \
-    tri.ui
+    tri.ui \
+    incendie.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

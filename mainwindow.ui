@@ -570,7 +570,7 @@ background:#303030;
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="MAIL">
+    <widget class="QPushButton" name="incendie">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -599,7 +599,7 @@ background:#303030;
 }</string>
      </property>
      <property name="text">
-      <string>Mail</string>
+      <string>Flame</string>
      </property>
      <property name="icon">
       <iconset>

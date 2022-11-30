@@ -26,7 +26,11 @@
 #include <QCoreApplication>
 #include <QTextStream>
 #include "statistique.h"
+#include "arduino.h"
+#include "incendie.h"
+#include "ui_incendie.h"
 
+#include <QDialog>
 //Test Git
 
 MainWindow::MainWindow(QWidget *parent)
@@ -34,9 +38,18 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+   /* int ret=A1.connect_arduino();
+    switch(ret)
+    {case(0):qDebug()<<"Arduino is available and connected to "<<A1.getarduino_port_name();
+        break;
+    case(1):qDebug()<<"Arduino is available but not connected  "<<A1.getarduino_port_name();
+        break;
+    case(-1):qDebug()<<"Arduino is unavailable";
+        break;
 }
-
+*/
+    //QObject::connect(A1.getserial(),SIGNAL(readyRead()),this,update_label()); //update label to nzidoha men ba3d ken st7a9ina
+}
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -160,4 +173,11 @@ void MainWindow::on_Stats_clicked()
     st=new statistique(this);
     st->show();
     st->exec();
+}
+
+void MainWindow::on_incendie_clicked()
+{
+    incendie inc;
+    //inc=new incendie(this);
+    inc.exec();
 }
