@@ -30,6 +30,7 @@
 #include <QtPrintSupport/QPrinter>
 #include<QPdfWriter>
 #include"QSqlRecord"
+#include <QSqlError>
 #ifndef QT_NO_PRINTER
 #endif
     Aj::Aj()
@@ -38,8 +39,7 @@
         prenom=" ";
         numero=0;
         etat=" ";
-        age=0;
-    }
+        age=0;  }
     Aj::Aj(int id ,QString nom , QString prenom ,int numero , QString etat,int age)
     { this->id=id ;  this->nom=nom ; this->prenom=prenom ; this->numero=numero ; this->etat=etat,this->age=age ;}
     int Aj::getid(){return id ;}
@@ -56,6 +56,8 @@
     void Aj::setage(int age){this->age=age;}
     bool Aj::ajouter()
    {
+        if(userExists(id)){return false;}
+
                 QSqlQuery query;
                 QString id_string=QString::number(id);
                   QString num_string=QString::number(numero);
@@ -119,6 +121,28 @@ bool Aj::rechid(int x){
     query.prepare("select * from Aj where id = :id;");
     query.bindValue(":id", x);
     return query.exec();
+}
+bool Aj:: userExists(int matricule)
+{
+    bool exists = false;
+
+    QSqlQuery checkQuery;
+    checkQuery.prepare("SELECT * FROM Aj WHERE id = (:matricule)");
+    checkQuery.bindValue(":matricule", matricule);
+
+    if (checkQuery.exec())
+    {
+        if (checkQuery.next())
+        {
+            exists = true;
+        }
+    }
+    else
+    {
+        qDebug() << "User not found:" << checkQuery.lastError();
+    }
+
+    return exists;
 }
 QSqlQueryModel* Aj::rechercherid(QString a)
 {
@@ -300,3 +324,24 @@ bool Aj::chercher(int id){
 }
 }
         return false;  }
+
+
+
+
+
+
+
+
+
+
+
+
+QSqlQueryModel* Aj ::affiche()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+        model->setQuery("SELECT ROOM_NUMBER from ROOMS");
+        model->setHeaderData(0,Qt::Horizontal,QObject::tr("ROOM_NUMBER"));
+    return model;
+}
+
+

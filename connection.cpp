@@ -11,7 +11,9 @@ QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
 db.setDatabaseName("test_bd");
 db.setUserName("system");//inserer nom de l'utilisateur
 db.setPassword("hiba123");//inserer mot de passe de cet utilisateur
-
+//db.setDatabaseName("test");
+//db.setUserName("alaa");//inserer nom de l'utilisateur
+//db.setPassword("1001");//inserer mot de passe de cet utilisateur
 if (db.open())
 test=true;
 

@@ -2,6 +2,7 @@
 #define AA_H
 
 #include <QDialog>
+#include"arduino1.h"
 
 namespace Ui {
 class AA;
@@ -18,8 +19,11 @@ public:
 private slots:
     void on_pb_ajouter_clicked();
 
+
 private:
     Ui::AA *ui;
+    QByteArray data;
+    arduino1 d;
 };
 
 #endif // AA_H

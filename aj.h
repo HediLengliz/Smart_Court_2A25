@@ -8,9 +8,11 @@
 #include <QCalendarWidget>
 #include <QTextCharFormat>
 
+
 class Aj
 {
 public:
+    bool  userExists(int matricule) ;
     Aj();
     Aj(int,QString,QString,int,QString,int);
     int getid();
@@ -42,6 +44,8 @@ public:
             void  telechargerPDF();
 void calendrier(QTextCharFormat f,QCalendarWidget * w);
 bool chercher(int);
+
+   QSqlQueryModel* affiche();
 
 
 private:

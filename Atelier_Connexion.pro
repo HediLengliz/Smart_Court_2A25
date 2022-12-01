@@ -5,8 +5,21 @@
 #-------------------------------------------------
 
 QT       += core gui sql
-
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+TARGET = Atelier_Connexion
+TEMPLATE = app
+QT += widgets multimedia
+QT += printsupport
+QT       += network
+QT       += core gui  serialport
+QT +=gui
+QT += widgets
+QT +=charts
+QT       += core gui sql \
+    quick
+QT +=core gui sql core network multimedia multimediawidgets charts serialport printsupport
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets quickwidgets
 
 TARGET = Atelier_Connexion
 TEMPLATE = app
@@ -23,7 +36,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 CONFIG += c++11
-INCLUDEPATH +=include/
+INCLUDEPATH += include/
 VPATH +=src/
 SOURCES += \
     aa.cpp \
@@ -31,9 +44,10 @@ SOURCES += \
     aaaa.cpp \
     aaaaa.cpp \
     aj.cpp \
+    arduino1.cpp \
     calan.cpp \
     connection.cpp \
-    mail.cpp \
+    maiiil.cpp \
         main.cpp \
     mainwindow.cpp \
     rech.cpp \
@@ -47,9 +61,10 @@ HEADERS += \
     aaaa.h \
     aaaaa.h \
     aj.h \
+    arduino1.h \
     calan.h \
-    mail.h \
     connection.h \
+    maiiil.h \
     mainwindow.h \
     rech.h \
     smtp.h \
@@ -62,7 +77,7 @@ FORMS += \
         aaaa.ui \
         aaaaa.ui \
         calan.ui \
-        mail.ui \
+        maiiil.ui \
         mainwindow.ui \
         rech.ui \
         stapd.ui
@@ -81,3 +96,5 @@ SUBDIRS += \
 DISTFILES += \
     smtp.exe \
     smtp.pro.user
+
+RESOURCES +=
