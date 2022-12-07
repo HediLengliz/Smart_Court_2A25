@@ -196,10 +196,14 @@ bool Employee::supprimer(int CIN)
         {
             query.prepare("Delete from OBJECTIVE where CIN=:CIN");
             query.bindValue(":CIN",CIN);
-            query.exec();
-            query.prepare("Delete from EMPLOYEE where CIN=:CIN");
-            query.bindValue(":CIN",CIN);
-            return query.exec();
+             if(query.exec())
+            {
+                query.prepare("Delete from EMPLOYEE where CIN=:CIN");
+                query.bindValue(":CIN",CIN);
+                return query.exec();
+            }
+            else
+                 return false;
         }
         else
             return false;

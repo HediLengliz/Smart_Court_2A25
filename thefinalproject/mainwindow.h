@@ -1,8 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include"arduino1.h"
+#include"aj.h"
 #include <QMainWindow>
 #include <QDesktopServices>
+#include <QMediaPlayer>
 #include <QUrl>
 #include "employee.h"
 #include "connection.h"
@@ -18,6 +20,9 @@
 #include "notif.h"
 #include "his.h"
 #include "statis.h"
+#include "accuse.h"
+#include "arduinoS.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -37,10 +42,13 @@ public:
     notif m;
     his * His;
     Statis *statis;
+    QMediaPlayer * media;
 
 private slots:
 
     void update_code();
+
+    void update_label();
 
     void on_pushButton_10_clicked();
 
@@ -177,12 +185,138 @@ private slots:
 
     void on_DEL_PUSH_5_clicked();
 
+
+
+    void on_legalAffairs_clicked();
+
+    void on_PDF_ACC_clicked();
+
+    void on_ADD_ACC_clicked();
+
+    void on_List_ACC_clicked();
+
+    void on_MODIFY_clicked();
+
+    void on_DELETE_ACC_clicked();
+
+    void on_getsrch_clicked();
+
+    void on_Sort_clicked();
+
+    void on_RES_clicked();
+
+    void on_add__acc_clicked();
+
+    void on_modify_clicked();
+
+    void on_supp_btn_clicked();
+
+    void on_search_clicked();
+
+    void on_UPLOAD_clicked();
+
+
+
+
+
+
+    void on_Stats_clicked();
+
+
+
+    void on_qrcodegen_clicked();
+
+    void on_LogOutACC_clicked();
+
+    void on_EXIT_AACC_clicked();
+
+    void on_EXIT_DACC_clicked();
+
+    void on_EXIT_MACC_clicked();
+
+    void on_EXIT_DACC_2_clicked();
+
+    void on_EXIT_RACC_clicked();
+
+    void on_EXIT_TACC_clicked();
+
+    void on_EXIT_RSACC_clicked();
+
+    void on_online_clicked();
+
+    void on_incendie_clicked();
+
+    void on_incendie_2_clicked();
+
+    void on_pb_ajouter_clicked();
+
+    void on_hiiii_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_mod_clicked();
+
+    void on_hkkk_clicked();
+
+    void on_aff_clicked();
+
+    void on_pushButton_tri_clicked();
+
+    void on_pushButton_trid_clicked();
+
+    void on_PUSH_clicked();
+
+    void on_pb_supp_clicked();
+
+    void on_MODIFIER_clicked();
+
+    void on_rech_clicked();
+
+    void on_rechercher_clicked();
+
+    void on_pushButton_26_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_19_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_28_clicked();
+
+    void on_EXIT_6_clicked();
+
+    void on_pushButton_31_clicked();
+
+    void on_pushButton_32_clicked();
+
+    void on_pushButton_33_clicked();
+
+    void on_Sort_2_clicked();
+
+    void on_DEL_PUSH_10_clicked();
+
+    void on_DEL_PUSH_9_clicked();
+
+    void on_DEL_PUSH_8_clicked();
+
+    void on_DEL_PUSH_7_clicked();
+
+    void on_pushButton_22_clicked();
+
 private:
     Ui::MainWindow *ui;
     Cihart *cihart;
     QByteArray data;
-    Arduino A;
+    Arduino Ar;
     room r;
+    Accuse A;
+    Arduino AA;
+    arduinoS As;
+    arduino1 d;
+     Aj a;
 
 
 };

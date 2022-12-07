@@ -2,6 +2,7 @@
 #include <QMessageBox>
 #include <QApplication>
 #include "connection.h"
+#include <QMediaPlayer>
 
 #include <QApplication>
 
@@ -18,7 +19,9 @@ int main(int argc, char *argv[])
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
         w.show();
-
+        QMediaPlayer * media = new QMediaPlayer();
+        media->setMedia(QUrl("qrc:/new/prefix1/icons/law-and-order-full-theme-high-quality.mp3"));
+        media->play();
 }
     else
         QMessageBox::critical(nullptr, QObject::tr("database is not open"),

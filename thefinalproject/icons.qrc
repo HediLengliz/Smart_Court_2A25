@@ -23,5 +23,15 @@
         <file>icons/notification.png</file>
         <file>icons/history.png</file>
         <file>icons/pie-chart.png</file>
+        <file>icons/download.png</file>
+        <file>icons/burn.png</file>
+        <file>icons/pdf-file.png</file>
+        <file>icons/legal-document.png</file>
+        <file>icons/file-upload-icon.png</file>
+        <file>icons/auction.png</file>
+        <file>icons/calendar.png</file>
+        <file>icons/email.png</file>
+        <file>icons/law-and-order-full-theme-high-quality.mp3</file>
+        <file>icons/mixkit-positive-interface-click-1112.wav</file>
     </qresource>
 </RCC>

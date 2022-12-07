@@ -1,4 +1,5 @@
 //Libraries
+/*
 #include <Keypad.h>
 
 //Constants
@@ -22,10 +23,38 @@ void loop() {
   readKp4x4();
 }
 
-void readKp4x4() { /* function readKp4x4 */
+void readKp4x4() { /* function readKp4x4 
   //// Read button states from keypad
   char customKey = kp4x4.getKey();
   if (customKey) {
     Serial.println(customKey);
+  }
+}*/
+
+#include <Keypad.h>
+
+const byte ROWS = 4; //nombre de lignes
+const byte COLS = 4; //nombre de colonnes
+char keys[ROWS][COLS] = {
+  {'1','2','3','A'},
+  {'4','5','6','B'},
+  {'7','8','9','C'},
+  {'*','0','#','D'}
+};
+byte rowPins[ROWS] = {13, 12, 11, 10}; //entrées numériques où sont branchées les lignes
+byte colPins[COLS] = {9, 8, 7, 6}; //entrées numériques où sont branchées les colonnes
+
+Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
+
+void setup(){
+  keypad.setDebounceTime(500);
+  Serial.begin(9600);
+}
+  
+void loop(){
+  char key = keypad.getKey();
+  
+  if (key != NO_KEY){
+    Serial.println(key);
   }
 }

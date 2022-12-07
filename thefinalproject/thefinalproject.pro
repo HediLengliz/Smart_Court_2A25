@@ -1,4 +1,4 @@
-QT       += core gui sql printsupport charts serialport
+QT       += core gui sql printsupport charts serialport multimedia network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,37 +16,77 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aj.cpp \
     arduino.cpp \
+    arduino1.cpp \
+    arduinoS.cpp \
     cihart.cpp \
     connection.cpp \
     employee.cpp \
     exportexcelobject.cpp \
     his.cpp \
+    incendie.cpp \
     main.cpp \
     mainwindow.cpp \
     notif.cpp \
     objective.cpp \
     room.cpp \
-    statis.cpp
+    smtp.cpp \
+    statis.cpp \
+    accuse.cpp \
+    QrCode.cpp\
+    statistique.cpp
+
 
 HEADERS += \
+    aj.h \
     arduino.h \
+    arduino1.h \
+    arduinoS.h \
     cihart.h \
     connection.h \
     employee.h \
     exportexcelobject.h \
     his.h \
+    incendie.h \
     mainwindow.h \
     notif.h \
     objective.h \
     room.h \
-    statis.h
+    smtp.h \
+    src/SmtpMime \
+    src/emailaddress.h \
+    src/mimebase64encoder.h \
+    src/mimebase64formatter.h \
+    src/mimebytearrayattachment.h \
+    src/mimecontentencoder.h \
+    src/mimecontentformatter.h \
+    src/mimefile.h \
+    src/mimehtml.h \
+    src/mimeinlinefile.h \
+    src/mimemessage.h \
+    src/mimemultipart.h \
+    src/mimepart.h \
+    src/mimeqpencoder.h \
+    src/mimeqpformatter.h \
+    src/mimetext.h \
+    src/quotedprintable.h \
+    src/smtpclient.h \
+    src/smtpmime_global.h \
+    statis.h \
+    accuse.h \
+    QrCode.hpp \
+    statistique.h
+
 
 FORMS += \
     cihart.ui \
     his.ui \
+    incendie.ui \
     mainwindow.ui \
-    statis.ui
+    statis.ui \
+    statistique.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -71,3 +111,6 @@ DISTFILES += \
     icons/plus.png \
     icons/x-mark.png \
     icons/x-mark.png
+
+SUBDIRS += \
+    src/SMTPEmail.pro
